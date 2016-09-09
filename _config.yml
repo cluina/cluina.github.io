@@ -7,7 +7,7 @@ permalink:           pretty
 # Setup
 title:               Re:boot
 tagline:             ' As a Softwere Engineer;'
-description:         '<img src="http://vincha.me/wp-content/uploads/2015/11/%EB%94%B0%EC%98%B4%ED%91%9C.png" style="width: 23px;"><h3>Re:boot</h3>><span style="font-size:12px;">스스로 엔지니어라고 부르고 싶은<br>쪼렙 개발자<small>(라고 쓰고 코더라고 읽는다)</small> 의<br>본격 삽질 노트</span>'
+description:         '<img src="http://vincha.me/wp-content/uploads/2015/11/%EB%94%B0%EC%98%B4%ED%91%9C.png" style="width: 23px; margin-bottom: 10px;"><h3 style="color: #fff;">Re:boot</h3><span style="font-size:13px;">스스로 엔지니어라고 부르고 싶은<br>쪼렙 개발자<small>(라고 쓰고 코더라고 읽는다)</small> 의<br>본격 삽질 노트</span>'
 url:                 https://cluina.github.io
 baseurl:             ''
 paginate:            5
