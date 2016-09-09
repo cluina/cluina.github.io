@@ -4,7 +4,7 @@
 
 나에게도 **리부트**는 새로운 시작, 새로운 역사를 의미한다. 회사에서 나의 역할은 황송하게도 **Software Engineer** 이지만, 사실은 그냥 **비전공 개발자**(*라고 쓰고 코더라고 읽는다*) 나부랭이에 불과하다. 그저 동작하는 수준의 코드에만 천착해왔던 내가 스스로 엔지니어로 거듭나기 위한 노력을 하려고 한다. 그래서 거창하지만 `Re:boot`이라 규정하고 변화해 나가기 위한 과정을 기록하려 한다.
 
-(img)
+![MARVEL REBOOT][image-1]
 
 ## 학습 계획
 사내 엔지니어 평가표를 기준으로 스스로를 평가했을 때, 나는 회사가 나에게 요구하는 역량에 못미친다. 가장 처참한 점수가 나왔던 항목은 다음과 같다:
@@ -24,3 +24,4 @@
 > Once you stop learning, you start dying.
 > *Albert Einstein*
 
+[image-1]:	https://i.ytimg.com/vi/kie_UNYUSWU/0.jpg "MARVEL REBBOOT"
