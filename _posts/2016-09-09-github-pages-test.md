@@ -23,8 +23,10 @@ date:   2016-09-09 13:31:00
 > 대통령은 제3항과 제4항의 사유를 지체없이 공포하여야 한다.
 
 ```php
+{% highlight ruby %}
 $course->students()->updateExistingPivot($request->student_id, [
     'is_dropped' => true,
     'last_running_course_id' => $last_running_course->id
 ]);
+{% endhighlight %}
 ```
