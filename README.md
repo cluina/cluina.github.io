@@ -1,134 +1,26 @@
-# Lanyon
+# 소프트웨어 엔지니어로 Reboot
 
-Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+코믹스에 등장하는 슈퍼 히어로들은 시리즈가 **리부트**되면, 새로운 세계(페레럴 월드, 평행 우주)에서 새로운 역사를 시작한다. 본질적인 캐릭터 자체는 유지하지만 외모나 성장 배경 등의 설정들이 바뀌면서 시대의 흐름에 맞는 새로운 이야기가 전개되는 것이다.
 
-![Lanyon](https://f.cloud.github.com/assets/98681/1825266/be03f014-71b0-11e3-9539-876e61530e24.png)
-![Lanyon with open sidebar](https://f.cloud.github.com/assets/98681/1825267/be04a914-71b0-11e3-966f-8afe9894c729.png)
+나에게도 **리부트**는 새로운 시작, 새로운 역사를 의미한다. 회사에서 나의 역할은 황송하게도 **Software Engineer** 이지만, 사실은 그냥 **비전공 개발자**(*라고 쓰고 코더라고 읽는다*) 나부랭이에 불과하다. 그저 동작하는 수준의 코드에만 천착해왔던 내가 스스로 엔지니어로 거듭나기 위한 노력을 하려고 한다. 그래서 거창하지만 `Re:boot`이라 규정하고 변화해 나가기 위한 과정을 기록하려 한다.
 
+(img)
 
-## Contents
+## 학습 계획
+사내 엔지니어 평가표를 기준으로 스스로를 평가했을 때, 나는 회사가 나에게 요구하는 역량에 못미친다. 가장 처참한 점수가 나왔던 항목은 다음과 같다:
 
-- [Usage](#usage)
-- [Options](#options)
-  - [Sidebar menu](#sidebar-menu)
-  - [Themes](#themes)
-  - [Reverse layout](#reverse-layout)
-- [Development](#development)
-- [Author](#author)
-- [License](#license)
+- 전산학
+	- 자료구조
+	- 알고리즘
+	- 운영체제
+	- 시스템 프로그래밍
+- 소프트웨어공학
 
+실무자라기 보다는 학부생이 공부할 법한 과목이지만, 일단 위에 나열한 것들을 공부할 생각이다. 전공 강의로 못들은 대신 **MOOC 강좌**를 적극 활용해서 지식을 채울 생각이다. 
 
-## Usage
+## Be 전공자?
+누군가는 *”우린 전공자만 우대합니다.”*라고 하고 다른 누군가는 *“전공자들도 다 알고 일하는 사람없다”*고도 말한다. 이런 말에 동조할 생가도 좌절할 생각도 없고, 그들과 비교하거나 경쟁할 생각은 더욱 없다. 단지 스스로를 *코더*나 *비전공자*가 아닌 **엔지니어**로 소개할 수 있다면 좀 괜찮은 개발자가 될 수 있지 않을까하는 마음으로 나 자신을 `Re:boot`한다. 비록 출발점은 다르지만 조금씩 멈추지않고 걷다보면 언젠가 앞서갈 내 모습을 상상하며.
 
-Lanyon is a theme built on top of [Poole](https://github.com/poole/poole), which provides a fully furnished Jekyll setup—just download and start the Jekyll server. See [the Poole usage guidelines](https://github.com/poole/poole#usage) for how to install and use Jekyll.
+> Once you stop learning, you start dying.
+> *Albert Einstein*
 
-
-## Options
-
-Lanyon includes some customizable options, typically applied via classes on the `<body>` element.
-
-
-### Sidebar menu
-
-Create a list of nav links in the sidebar by assigning each Jekyll page the correct layout in the page's [front-matter](http://jekyllrb.com/docs/frontmatter/).
-
-```
----
-layout: page
-title: About
----
-```
-
-**Why require a specific layout?** Jekyll will return *all* pages, including the `atom.xml`, and with an alphabetical sort order. To ensure the first link is *Home*, we exclude the `index.html` page from this list by specifying the `page` layout.
-
-
-### Themes
-
-Lanyon ships with eight optional themes based on the [base16 color scheme](https://github.com/chriskempson/base16). Apply a theme to change the color scheme (mostly applies to sidebar and links).
-
-![Lanyon with red theme](https://f.cloud.github.com/assets/98681/1825270/be065110-71b0-11e3-9ed8-9b8de753a4af.png)
-![Lanyon with red theme and open sidebar](https://f.cloud.github.com/assets/98681/1825269/be05ec20-71b0-11e3-91ea-a9138ef07186.png)
-
-There are eight themes available at this time.
-
-![Available theme classes](https://f.cloud.github.com/assets/98681/1817044/e5b0ec06-6f68-11e3-83d7-acd1942797a1.png)
-
-To use a theme, add any one of the available theme classes to the `<body>` element in the `default.html` layout, like so:
-
-```html
-<body class="theme-base-08">
-  ...
-</body>
-```
-
-To create your own theme, look to the Themes section of [included CSS file](https://github.com/poole/lanyon/blob/master/public/css/lanyon.css). Copy any existing theme (they're only a few lines of CSS), rename it, and change the provided colors.
-
-
-### Reverse layout
-
-![Lanyon with reverse layout](https://f.cloud.github.com/assets/98681/1825265/be03f2e4-71b0-11e3-89f1-360705524495.png)
-![Lanyon with reverse layout and open sidebar](https://f.cloud.github.com/assets/98681/1825268/be056174-71b0-11e3-88c8-5055bca4307f.png)
-
-Reverse the page orientation with a single class.
-
-```html
-<body class="layout-reverse">
-  ...
-</body>
-```
-
-
-### Sidebar overlay instead of push
-
-Make the sidebar overlap the viewport content with a single class:
-
-```html
-<body class="sidebar-overlay">
-  ...
-</body>
-```
-
-This will keep the content stationary and slide in the sidebar over the side content. It also adds a `box-shadow` based outline to the toggle for contrast against backgrounds, as well as a `box-shadow` on the sidebar for depth.
-
-It's also available for a reversed layout when you add both classes:
-
-```html
-<body class="layout-reverse sidebar-overlay">
-  ...
-</body>
-```
-
-### Sidebar open on page load
-
-Show an open sidebar on page load by modifying the `<input>` tag within the `sidebar.html` layout to add the `checked` boolean attribute:
-
-```html
-<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" checked>
-```
-
-Using Liquid you can also conditionally show the sidebar open on a per-page basis. For example, here's how you could have it open on the homepage only:
-
-```html
-<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" {% if page.title =="Home" %}checked{% endif %}>
-```
-
-## Development
-
-Lanyon has two branches, but only one is used for active development.
-
-- `master` for development.  **All pull requests should be to submitted against `master`.**
-- `gh-pages` for our hosted site, which includes our analytics tracking code. **Please avoid using this branch.**
-
-
-## Author
-
-**Mark Otto**
-- <https://github.com/mdo>
-- <https://twitter.com/mdo>
-
-
-## License
-
-Open sourced under the [MIT license](LICENSE.md).
-
-<3
