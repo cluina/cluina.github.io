@@ -30,3 +30,13 @@ $course->students()->updateExistingPivot($request->student_id, [
 ]);
 {% endhighlight %}
 ```
+
+
+```
+{% highlight php %}
+$course->students()->updateExistingPivot($request->student_id, [
+    'is_dropped' => true,
+    'last_running_course_id' => $last_running_course->id
+]);
+{% endhighlight %}
+```
