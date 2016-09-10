@@ -19,4 +19,6 @@ p { text-align: justify; }
 }
 .post-date-custom {}
 
+.sidebar i:hover, .sidebar i:focus {  background-color: #fff;  }  
+
 #disqus_thread {  margin: 100px 0;  }
