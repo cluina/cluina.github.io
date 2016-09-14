@@ -7,7 +7,7 @@ var getParam=function(param){var queryString=window.location.search.substring(1)
         +'<a href="'+ post.href+'" style="margin-bottom: 8px;">'
         + posts[i].title
         +'</a>'
-        +' <span class="date">- '
+        +' <span class="date" style="display: inline-block;">- '
         + posts[i].date.day+' '+ posts[i].date.month+' '+ posts[i].date.year
         +'</span>'
         + tagsList
