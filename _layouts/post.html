@@ -7,7 +7,7 @@ layout: default
     <span class="post-date post-date-custom">{{ page.date | date_to_string }}</span>
     <span class="post-date">
         {% for tag in page.tags %}
-            <a href="/tags/{{ tag }}" class="tag">#{{ tag }}</a>
+            <a href="/search/?tags={{ tag }}" class="tag">#{{ tag }}</a>
         {% endfor %}
     </span>
   {{ content }}

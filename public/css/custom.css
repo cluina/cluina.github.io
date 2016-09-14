@@ -43,7 +43,7 @@ p { text-align: justify; }
 }
 .tag {
     background-color: #e8e8e8;
-    padding: 3px 8px;
+    padding: 2px 8px;
     font-size: .9em;
 }
 .tag:hover {
