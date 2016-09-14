@@ -59,7 +59,7 @@ p { text-align: justify; }
 
 .wrap {
     min-height: 90vh;
-    /*padding-bottom: 2em;*/
+    padding-bottom: 2em;
 }
 footer {
     /*position: fixed;*/
