@@ -41,6 +41,15 @@ p { text-align: justify; }
     width: 100%;
     border-bottom: 1px solid #e8e8e8;
 }
+.tag {
+    background-color: #e8e8e8;
+    padding: 3px 8px;
+    font-size: .9em;
+}
+.tag:hover {
+    background-color: #dedede;
+    text-decoration: none;
+}
 
 .post img {
     margin-right: auto;
