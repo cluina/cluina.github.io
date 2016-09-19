@@ -1,30 +1,32 @@
 ---
 layout: page
-title: About
+title: About Sangyoung
 ---
 
+<img src="/public/images/sy_lee_1x1.jpeg" style="border-radius: 5em; width: 130px;">
+
+---
+
+- **여덟,** 동네형 따라서 다닌 컴퓨터 학원에서 `GW-BASIC`으로 컴퓨터와 처음 만남.
+- **열여덟,** 화가를 꿈꾸다가 돌연 신문방송학과 진학.
+- **스물여덟,** 방송일 그만둠.
+- **서른하나,** 스타트업에 웹개발자로 조인.
+- **현재,** `while (true) {   /* 삽질 */   }` 
+- **향후 미션,** 
+	- 소프트웨어 엔지니어
+	- 오픈소스 프로젝트
+	- 개발 커뮤니티 활동
+	- 격주 1회 포스팅
+	- 기술 관련 서적 집필
+	
+---
+	
 <p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
+<em>포스팅 관련 혹은 어떤 주제라도 저와 이야기 나누고 싶으신 분은 피드백 주시기 바랍니다.</em>
+<br><br>
+- Contact: 
+<a href="https://github.com/cluina" style="margin-right: 8px;"><i class="fa fa-github"></i> 깃허브</a>
+<a href="https://www.facebook.com/sangyoung.lee.391" style="margin-right: 8px;"><i class="fa fa-facebook"></i> 페이스</a>
+<a href="mailto:lee@sangyoung.me" style="margin-right: 8px;"><i class="fa fa-paper-plane"></i> 이메일</a>
+   
 </p>
-
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
-
-There are currently two themes built on Poole:
-
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
