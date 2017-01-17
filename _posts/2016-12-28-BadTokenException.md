@@ -7,11 +7,8 @@ tags: [Android, Exception, BadTokenException]
 
 
 안드로이드 앱을 테스트하다보면 UI를 핸들링할 때, 가끔 BadTokenException이 발생하는 것을 볼 수가 있다. 보통 빌드 시에는 알 수 없고, 런타임 시점에서 발생하는 점에서 약간 골치가 아프다. 특히 안드로이드의 초보인 나는 평소에는 잘 구동되던 다이얼로그 창에서 오류를 발생하는 것을 보고 적잖이 당황했다. 더구나 내가 구현하지도 않은 나쁜 토큰(Bad Token) 때문에 발생한 오류라니.. 좀 더 명확한 이유를 알고 싶었다. 내가 접한 예외 메시지는 다음과 같다.
-  
 
-> android.view.WindowManager$BadTokenException: Unable to add window -- token android.os.BinderProxy@40b47bd8 is not valid; is your activity running?
-
-
+> android.view.WindowManager$**BadTokenException**: Unable to add window -- token android.os.BinderProxy@40b47bd8 is not valid; is your activity running?
 
 ## 발생 원인
 
@@ -22,40 +19,40 @@ tags: [Android, Exception, BadTokenException]
 
   
 ```java
-	private class AutoSaveTask extends AsyncTask {
-	
-		@Override
-		protected Boolean doInBackground (String... params) {
-		
-		// 데이터 저장 요청 코드...
-		
-		}
-		
-		@Override
-		protected void onPostExecute (final Boolean success) {
-		
-		if (success) {
-			try {
-				JSONObject response = new JSONObject(responseString);
-				String status = response.getString("status");
-				String message = response.getString("msg");
-			
-				// 서버로 부터 받은 메시지를 다이얼로그 창으로 띄움.
-				AlertDialog.Builder dialog = new AlertDialog.Builder(ThisActivity.this);
-				dialog.setTitle(status);
-				dialog.setMessage(message);
-				ThisActivity.this.finish();
-			
-			} catch (JSONException e) {
-				e.printStackTrace();
-			}
-		}
-		}
-	}
+private class AutoSaveTask extends AsyncTask {
+
+    @Override
+    protected Boolean doInBackground (String... params) {
+    
+        // 데이터 저장 요청 코드...
+    
+    }
+    
+    @Override
+    protected void onPostExecute (final Boolean success) {
+    
+    if (success) {
+        try {
+            JSONObject response = new JSONObject(responseString);
+            String status = response.getString("status");
+            String message = response.getString("msg");
+        
+            // 서버로 부터 받은 메시지를 다이얼로그 창으로 띄움.
+            AlertDialog.Builder dialog = new AlertDialog.Builder(ThisActivity.this);
+            dialog.setTitle(status);
+            dialog.setMessage(message);
+            ThisActivity.this.finish();
+        
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+    }
+}
 ```
 
 
-그런데 자동 저장 기능은 사용자가 자의든 타의든 뒤로가기 버튼이나 홈 버튼을 누를 때도 호출되면 아주 좋을 것 같다. 바로 `onPause()` 와 `onDestroy()` 메소드를 오버라이딩해서 자동저장 기능 호출하고` finish()`로 Activity를 종료했다. 이제 사용자는 자신이 입력하던 데이터를 보호해주는 훌륭한 앱을 얻었다. 하지만 동시에 크래쉬가 발생해 앱이 종료되는 상황에 직면할 것이다.
+그런데 자동 저장 기능은 사용자가 자의든 타의든 뒤로가기 버튼이나 홈 버튼을 누를 때도 호출되면 아주 좋을 것 같다. 바로 `onPause()` 와 `onDestroy()` 메소드를 오버라이딩해서 자동저장 기능 호출하고 `finish()`로 Activity를 종료했다. 이제 사용자는 자신이 입력하던 데이터를 보호해주는 훌륭한 앱을 얻었다. 하지만 동시에 크래쉬가 발생해 앱이 종료되는 상황에 직면할 것이다.
 안드로이드 라이프 사이클에 익숙한 개발자들에게는 간단한 문제일지 모르겠지만, 초보 개발자인 나에게는 어떨 때는 잘되고, 어떨 때는 크래쉬를 일으켜서 앱을 종료시켜버리는 상황이 난감했다. 어느 시점에 오류가 발생하는지 테스트해보니 백버튼을 눌렀을 때마다 크래쉬가 발생하는 것을 발견했다. 안드로이드 시스템에서 뒤로가기 버튼을 눌렀을 때는 onDestroy() 메소드가 호출된다.  
 
 
