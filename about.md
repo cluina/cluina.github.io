@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Sangyoung
+title: About me
 ---
 
 <img src="/public/images/sy_lee_1x1.jpeg" style="border-radius: 5em; width: 130px;">
