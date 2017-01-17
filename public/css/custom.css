@@ -40,6 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 .post img {
     margin-right: auto;
     margin-left: auto;
+    border-radius: 0;
 }
 
 /* 포스트 본문 내 코드 블럭*/
