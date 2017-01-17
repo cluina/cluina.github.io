@@ -6,7 +6,35 @@ html {}
 h1, h2, h3, h4, h5, h6 {
     margin: 60px 0 30px 0;
 }
-p { text-align: justify; }
+
+/* 포스트 제목 */
+.post .post-title-custom {
+    margin: 100px 0;
+    font-size: 2rem;
+    word-wrap: break-word;
+}
+/* 포스트 작성일 */
+.post-date-custom {}
+
+/* 포스트 본문 문단 */
+.post p {
+    text-align: justify;
+    font-size: 0.9em;
+    line-height: 2.1;
+}
+
+/* 인용구 */
+.post blockquote p {
+    text-align: left;
+    margin-bottom: 3em;
+    word-wrap: break-word;
+}
+
+/* 포스트 본문 이미지 */
+.post img {
+    margin-right: auto;
+    margin-left: auto;
+}
 
 .masthead-title > small { display: inline; }
 
@@ -50,17 +78,6 @@ p { text-align: justify; }
     background-color: #dedede;
     text-decoration: none;
 }
-
-.post img {
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.post-title-custom {
-    margin: 100px 0;
-    font-size: 2.5rem;
-}
-.post-date-custom {}
 
 .img-circle {
     border-radius: 50%;

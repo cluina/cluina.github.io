@@ -1,4 +1,4 @@
-/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+apacheconf+bash+c+csharp+cpp+ruby+css-extras+docker+elixir+git+groovy+haskell+http+java+json+kotlin+less+markdown+nginx+perl+php+php-extras+python+sass+scss+scala+sql+swift+vim+yaml&plugins=show-language */
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+applescript+aspnet+bash+c+csharp+cpp+coffeescript+ruby+css-extras+docker+elixir+git+go+graphql+groovy+haskell+http+java+json+markdown+objectivec+php+php-extras+python+r+sass+scss+scala+scheme+sql+swift+yaml */
 /**
  * prism.js default theme for JavaScript, CSS and HTML
  * Based on dabblet (http://dabblet.com)
@@ -56,7 +56,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #f9f9f9;
+	background: #f5f2f0;
 }
 
 /* Inline code */
@@ -135,33 +135,5 @@ pre[class*="language-"] {
 
 .token.entity {
 	cursor: help;
-}
-
-div.prism-show-language {
-	position: relative;
-}
-
-div.prism-show-language > div.prism-show-language-label {
-	color: black;
-	background-color: #CFCFCF;
-	display: inline-block;
-	position: absolute;
-	bottom: auto;
-	left: auto;
-	top: 0;
-	right: 0;
-	width: auto;
-	height: auto;
-	font-size: 0.9em;
-	border-radius: 0 0 0 5px;
-	padding: 0 0.5em;
-	text-shadow: none;
-	z-index: 1;
-	box-shadow: none;
-	-webkit-transform: none;
-	-moz-transform: none;
-	-ms-transform: none;
-	-o-transform: none;
-	transform: none;
 }
 
