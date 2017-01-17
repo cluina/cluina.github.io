@@ -77,14 +77,14 @@ private class AutoSaveTask extends AsyncTask {
 
 원인을 정확히 알았으니 해결법은 간단하다. 해당 UI들을 사용할 때, Activity가 종료되었는 지를 확인하면된다. 만약 종료되었다면 다이얼로그 창을 열지 않으면 그만이다. 다음과 같이 `isFinishing()` 메소드를 사용하면 Activity의 종료 여부를 확인할 수 있다.
   
-
-	if (!ThisActivity.this.isFinishing()) {
-		AlertDialog.builder dialog  = new AlertDialog.builder(ThisActivity.this);
-		dialog.setTitle(status);
-		dialog.setMessage(message);
-		dialog.show();
-	}
-
+```java
+if (!ThisActivity.this.isFinishing()) {
+    AlertDialog.builder dialog  = new AlertDialog.builder(ThisActivity.this);
+    dialog.setTitle(status);
+    dialog.setMessage(message);
+    dialog.show();
+}
+```
 
 
 
