@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "BadTokenException 의 원인과 해결방법"
+title: "안드로이드 BadTokenException 의 원인과 해결방법"
 date: 2016-12-28 14:50:00
 tags: [Android, Exception, BadTokenException]
 ---
