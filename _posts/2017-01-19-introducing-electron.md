@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Electron, 웹기술로 크로스플랫폼 데스크톱 앱 만들기"
+description: "Electron 은 깃헙(Github)에서 Atom 에디터를 만들기 위해 만든 것이다. Atom 은 HTML5, CSS, Javascript 등 순수하게 웹기술로 구현되었는데, 프레임워크를 따로 분리해서  Atom-shell 이라는 이름으로 공개했다. 후에 Electron 이라는 명칭으로 변경했다."
 date: 2017-01-19 20:20:00
 tags: [Javascript, Electron, Node.js, "삽질"]
 image: "https://camo.githubusercontent.com/5dd01312b30468423cb45b582b83773f5a9019bb/687474703a2f2f656c656374726f6e2e61746f6d2e696f2f696d616765732f656c656374726f6e2d6c6f676f2e737667"
