@@ -3,7 +3,7 @@ layout: post
 title: "Electron, 웹기술로 크로스플랫폼 데스크톱 앱 만들기"
 date: 2017-01-19 20:20:00
 tags: [Javascript, Electron, Node.js, "삽질"]
-Image: "https://camo.githubusercontent.com/5dd01312b30468423cb45b582b83773f5a9019bb/687474703a2f2f656c656374726f6e2e61746f6d2e696f2f696d616765732f656c656374726f6e2d6c6f676f2e737667"
+image: "https://camo.githubusercontent.com/5dd01312b30468423cb45b582b83773f5a9019bb/687474703a2f2f656c656374726f6e2e61746f6d2e696f2f696d616765732f656c656374726f6e2d6c6f676f2e737667"
 ---
 
 IT 분야 중 웹(Web)은 가장 역동적으로 발전하고 있는 분야 중 하나다. 그 중에서도 최근 가장 HOT한 언어를 꼽으라면 가장 먼저 생각나는 것이 **Javascript** 다! HTML5 등장 이후로 웹 개발에서 프론트엔드의 비중이 높아졌고, Javascript 의 생태계는 비약적으로 발전했다. 
@@ -33,21 +33,21 @@ Electron 개발 경험은 아직 걸음마 단계여서 깊이 있는 내용을 
 
 ### 대표적인 앱
 
-#### 1. Atom
-깃헙이 만든 오픈소스 텍스트 에디터
-([https://atom.io/](https://atom.io/))
+#### Atom
+- 깃헙이 만든 오픈소스 텍스트 에디터
+- [https://atom.io/](https://atom.io/)
 
 ![][atom]
 
-#### 2. Slack
-웹훅과 봇 등 다양한 API 를 제공해서 업무 효율성을 높여주는 협업 메신저
-([https://slack.com/](https://slack.com/))
+#### Slack
+- 웹훅과 봇 등 다양한 API 를 제공해서 업무 효율성을 높여주는 협업 메신저
+- [https://slack.com/](https://slack.com/)
 
 ![][slack]
 
-#### 3. Visual Studio Code
-마이크로소프트가 내어놓은 가장 IDE에 근접한 텍스트 에디터
-([https://code.visualstudio.com/](https://code.visualstudio.com/))
+#### Visual Studio Code
+- 마이크로소프트가 내어놓은 가장 IDE에 근접한 텍스트 에디터
+- [https://code.visualstudio.com/](https://code.visualstudio.com/)
 
 ![][vs-code]
 

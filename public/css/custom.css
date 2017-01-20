@@ -3,7 +3,7 @@
  * --------------------------------------------------------------------------------- */
 
 html {}
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
     margin: 60px 0 30px 0;
 }
 
@@ -13,6 +13,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2rem;
     word-wrap: break-word;
 }
+
+/* 포스트 소제목 */
+.post h3, .post h4, .post h5, .post h6 {
+    margin: 30px 0 10px 0;
+}
+
 /* 포스트 작성일 */
 .post-date-custom {}
 
