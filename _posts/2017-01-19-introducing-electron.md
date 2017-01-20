@@ -35,32 +35,36 @@ Electron 개발 경험은 아직 걸음마 단계여서 깊이 있는 내용을 
 
 #### 1. Atom
 깃헙이 만든 오픈소스 텍스트 에디터
-[https://atom.io/](https://atom.io/)
+([https://atom.io/](https://atom.io/))
 
 ![][atom]
 
 #### 2. Slack
 웹훅과 봇 등 다양한 API 를 제공해서 업무 효율성을 높여주는 협업 메신저
-[https://slack.com/](https://slack.com/)
+([https://slack.com/](https://slack.com/))
 
 ![][slack]
 
 #### 3. Visual Studio Code
 마이크로소프트가 내어놓은 가장 IDE에 근접한 텍스트 에디터
-[https://code.visualstudio.com/](https://code.visualstudio.com/)
+([https://code.visualstudio.com/](https://code.visualstudio.com/))
 
 ![][vs-code]
 
 
 ## 개발 ~~삽질~~ 및 포스팅 계획
 
-아래 스크린샷에 보이는 앱을 만드는 것이 1차 스터디 목표이다. 개인적으로 사용할 간단한 Todo List 앱인데, 최소한의 요구사항으로 개발해서 이것 저것 재미난 기능들을 붙여볼 생각이다. 찾아봤자 한국어 자료는 거의 없으니, 해외 자료 뒤져보면서 오픈소스 열어보면서 그 과정을 정리하면 유의미한 작업이 될 것 같다. 그럼 커밍순~
+아래 스크린샷에 보이는 앱을 만드는 것이 1차 스터디 목표이다. 개인적으로 사용할 간단한 Todo List 앱인데, 보는 것처럼 UI 는 대강 나왔는데 Node.js 를 몰라 배우면서 진행해야겠다. 일단 최소한의 요구사항으로 개발해서 이것 저것 재미난 기능들을 붙여볼 생각이다. 찾아봤자 한국어 자료는 거의 없으니, 해외 자료 뒤져보면서 오픈소스 열어보면서 그 과정을 정리하면 유의미한 작업이 될 것 같다. 
+
+그럼 커밍순~
 
 ![][todo-list]
-*UI 는 대강 나왔는데 Node.js 를 몰라 배우면서 진행해야겠다*
+
+
 ---
 
-덧. 첫번째 작업은 유구한 전통에 따라 Hello World 를 찍어보겠다.
+*덧. 첫번째 작업은 유구한 전통에 따라 Hello World 를 찍어보겠다*
+
 
 [electron]:	https://camo.githubusercontent.com/5dd01312b30468423cb45b582b83773f5a9019bb/687474703a2f2f656c656374726f6e2e61746f6d2e696f2f696d616765732f656c656374726f6e2d6c6f676f2e737667 "Electron"
 [atom]: https://cdn-business.discourse.org/uploads/github_atom/487/cda7a1c2ac02fd3d.png "Atom"
