@@ -2,7 +2,7 @@ let initialData = {}
 
 const setTitle = hash => {
     document.title = hash.toUpperCase()
-    document.getElementById('tag-title').innerText = hash.toUpperCase()
+    document.getElementById('category-title').innerText = hash.toUpperCase()
 }
 
 const goHome = () => {

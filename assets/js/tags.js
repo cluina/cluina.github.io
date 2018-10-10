@@ -1,8 +1,9 @@
 let initialData = {}
 
-const setTitle = hash => {
-    document.title = hash.toUpperCase()
-    document.getElementById('tag-title').innerText = hash.toUpperCase()
+const setTitle = () => {
+    const prefix = window.location.hash
+    document.title = prefix + ' | @Sangyoung.me'
+    document.getElementById('tag-title').innerText = prefix
 }
 
 const goHome = () => {
@@ -48,7 +49,7 @@ const renderPosts = (hash) => {
 
 if (window.location.hash) {
     const hash = window.location.hash.split('#')[1]
-    setTitle(hash)
+    setTitle()
     fetch("/search.json", { headers: { "Content-Type": "application/json; charset=utf-8" }})
         .then(res => res.json())
         .then(response => {
