@@ -49,7 +49,7 @@ const renderPosts = (hash) => {
 }
 
 if (window.location.hash) {
-    const hash = window.location.hash.split('#')[1]
+    const hash = decodeURIComponent(window.location.hash.split('#')[1])
     setTitle(hash)
     fetch("/categories.json", { headers: { "Content-Type": "application/json; charset=utf-8" }})
         .then(res => res.json())
@@ -61,8 +61,9 @@ if (window.location.hash) {
 } else goHome()
 
 function HashHandler() {
-    setTitle()
-    renderPosts(window.location.hash.split('#')[1])
+    let hash = decodeURIComponent(window.location.hash.split('#')[1])
+    setTitle(hash)
+    renderPosts(hash)
 }
 
 window.addEventListener("hashchange", HashHandler, false);
