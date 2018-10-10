@@ -22,7 +22,7 @@ const renderPost = (post) => {
             <span class="tag text-muted" style="color: #bbb;">${post.category}</span>
         </a>
         <h2 class="post-title">
-            <a href="${post.url}" class="text-default">${post.title}</a>
+            <a href="${post.href}" class="text-default">${post.title}</a>
         </h2>
         <time class="post-date">${post.date_str}</time>
         <br>${renderTags(post.tags)}
