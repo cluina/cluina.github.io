@@ -1,7 +1,7 @@
 # Dependencies
 #markdown:         redcarpet
 # Build settings
- markdown:               kramdown
+markdown:               kramdown
 
 # Permalinks
 # permalink:        pretty

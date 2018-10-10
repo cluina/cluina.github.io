@@ -8,9 +8,7 @@ const toggleNav = () => {
         nav.classList.remove('extended')
         document.body.classList.remove('nav-open')
     }
-    // setTimeout(() => {
-    //     isExtended = !isExtended
-    // }, 200)
+    isExtended = !isExtended
 }
 for (item of document.getElementsByTagName('a')) {
     item.addEventListener('click' , e => toggleNav())

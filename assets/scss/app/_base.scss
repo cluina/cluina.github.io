@@ -24,6 +24,26 @@ body {
             opacity: 0.65;
             z-index: 1000;
         }
+
+        .navbar-default {
+            .navbar-toggle {
+                .icon-bar {
+                    //opacity: 0;
+
+                    &+.icon-bar {
+                        margin-top: -2px;
+                    }
+                    //&:first-child {
+                    //  transform: rotate(-45deg);
+                    //}
+                    //&.middle,
+                    //&:last-child {
+                    //  transform: rotate(45deg);
+                    //}
+                }
+            }
+        }
+
     }
 
     main {
