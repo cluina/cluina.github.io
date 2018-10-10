@@ -32,25 +32,25 @@
             <div class="container no-padding-xs">
                 <div class="nav-swipe-wrapper">
                     <ul id="toggle-nav" class="nav nav-pills nav-swipe">
-                        <li class=""><a href="/">HOME</a></li>
+                        <li class=""><a href="/">Home</a></li>
                         {% assign categories_list = site.categories %}
-                            {% if categories_list.first[0] == null %}
-                                {% for category in categories_list %}
-                                    <li><a href="/categories/#{{ category | downcase }}">{{ category | upcase }} ({{ site.tags[category].size }})</a></li>
-                                {% endfor %}
-                            {% else %}
-                                {% for category in categories_list %}
-                                    <li><a href="/categories/#{{ category[0] | downcase }}">{{ category[0] | upcase }} ({{ category[1].size }})</a></li>
-                                {% endfor %}
-                            {% endif %}
+                        {% if categories_list.first[0] == null %}
+                            {% for category in categories_list %}
+                                <li><a href="/categories/#{{ category | downcase }}">{{ category | capitalize }} ({{ site.tags[category].size }})</a></li>
+                            {% endfor %}
+                        {% else %}
+                            {% for category in categories_list %}
+                                <li><a href="/categories/#{{ category[0] | downcase }}">{{ category[0] | capitalize }} ({{ category[1].size }})</a></li>
+                            {% endfor %}
+                        {% endif %}
                         {% assign categories_list = nil %}
                         <li class="devider"></li>
                         <li><a href="/about">about</a></li>
                         <li><a href="/contact">contact</a></li>
                     </ul>
                     <!--<button class="nav-swipe-btn btn-icon hidden-md hidden-lg" @click="isExtended = !isExtended">-->
-                        <!--<i v-if="!isExtended" class="icon icon-angle-down text-bold"></i>-->
-                        <!--<i v-else class="icon icon-cancel text-bold"></i>-->
+                    <!--<i v-if="!isExtended" class="icon icon-angle-down text-bold"></i>-->
+                    <!--<i v-else class="icon icon-cancel text-bold"></i>-->
                     <!--</button>-->
                 </div>
             </div>
