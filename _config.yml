@@ -1,6 +1,5 @@
 # Dependencies
 markdown:         redcarpet
-pygments:         true
 # Build settings
 # markdown:               kramdown
 
