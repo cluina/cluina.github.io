@@ -1,7 +1,7 @@
 let initialData = {}
 
 const setTitle = () => {
-    const prefix = window.location.hash
+    const prefix = encodeURI(window.location.hash)
     document.title = prefix + ' | @Sangyoung.me'
     document.getElementById('tag-title').innerText = prefix
 }
