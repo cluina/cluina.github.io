@@ -4,7 +4,7 @@ title: "Electron, 웹기술로 크로스플랫폼 데스크톱 앱 만들기"
 description: "Electron 은 깃헙(Github)에서 Atom 에디터를 만들기 위해 만든 것이다. Atom 은 HTML5, CSS, Javascript 등 순수하게 웹기술로 구현되었는데, 프레임워크를 따로 분리해서  Atom-shell 이라는 이름으로 공개했다. 후에 Electron 이라는 명칭으로 변경했다."
 date: 2017-01-19 20:20:00
 category: "JAVASCRIPT"
-tags: [Javascript, Electron, Node.js, "삽질"]
+tags: [Javascript, Electron, Node.js]
 image: "https://i.ytimg.com/vi/iyjM39a0MWE/maxresdefault.jpg"
 ---
 
@@ -58,8 +58,6 @@ Electron 개발 경험은 아직 걸음마 단계여서 깊이 있는 내용을 
 
 그럼 커밍순~
 
-![][todo-list]
-
 
 ---
 
@@ -69,4 +67,4 @@ Electron 개발 경험은 아직 걸음마 단계여서 깊이 있는 내용을 
 [atom]: https://cdn-business.discourse.org/uploads/github_atom/487/cda7a1c2ac02fd3d.png "Atom"
 [slack]: https://inteamwetrust.files.wordpress.com/2016/05/slack-logo.jpg "Slack"
 [vs-code]: http://2434zd29misd3e4a4f1e73ki.wpengine.netdna-cdn.com/wp-content/uploads/2015/05/VS_rgb_Purple_D-800x227.png "Visual Studio Code"
-[todo-list]: /public/images/posts/2017-01-19-introducing-electron/todo-list.png "TODO LIST UI"
+

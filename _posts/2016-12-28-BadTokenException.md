@@ -9,7 +9,7 @@ image: "https://developer.android.com/static/images/home/jetpack-promo.svg?hl=ko
 ---
 
 
-안드로이드 앱을 테스트하다보면 UI를 핸들링할 때, 가끔 BadTokenException이 발생하는 것을 볼 수가 있다. 보통 빌드 시에는 알 수 없고, 런타임 시점에서 발생하는 점에서 약간 골치가 아프다. 특히 안드로이드의 초보인 나는 평소에는 잘 구동되던 다이얼로그 창에서 오류를 발생하는 것을 보고 적잖이 당황했다. 더구나 내가 구현하지도 않은 나쁜 토큰(Bad Token) 때문에 발생한 오류라니.. 좀 더 명확한 이유를 알고 싶었다. 내가 접한 예외 메시지는 다음과 같다.
+안드로이드 앱을 테스트하다보면 UI를 핸들링할 때, 가끔 BadTokenException 발생하는 것을 볼 수가 있다. 보통 빌드 시에는 알 수 없고, 런타임 시점에서 발생하는 점에서 약간 골치가 아프다. 특히 안드로이드의 초보인 나는 평소에는 잘 구동되던 다이얼로그 창에서 오류를 발생하는 것을 보고 적잖이 당황했다. 더구나 내가 구현하지도 않은 나쁜 토큰(Bad Token) 때문에 발생한 오류라니.. 좀 더 명확한 이유를 알고 싶었다. 내가 접한 예외 메시지는 다음과 같다.
 
 > android.view.WindowManager$**BadTokenException**: Unable to add window -- token android.os.BinderProxy@40b47bd8 is not valid; is your activity running?
 
@@ -59,7 +59,6 @@ private class AutoSaveTask extends AsyncTask {
 안드로이드 라이프 사이클에 익숙한 개발자들에게는 간단한 문제일지 모르겠지만, 초보 개발자인 나에게는 어떨 때는 잘되고, 어떨 때는 크래쉬를 일으켜서 앱을 종료시켜버리는 상황이 난감했다. 어느 시점에 오류가 발생하는지 테스트해보니 백버튼을 눌렀을 때마다 크래쉬가 발생하는 것을 발견했다. 안드로이드 시스템에서 뒤로가기 버튼을 눌렀을 때는 `onDestroy()` 메소드가 호출된다.  
 
 
-
 *Activity가 Destroy되는 시나리오들은:*
 
 - 사용자가 뒤로가기 버튼을 눌렀을 때
@@ -68,7 +67,6 @@ private class AutoSaveTask extends AsyncTask {
 - Stop된 상태에서 전면에 있는 Activity에 더 많은 리소스를 필요할 때
 - 사용자가 화면을 회전 시켰을 때
 	  
-
 
 
 상기 예제 코드같은 경우는 뒤로가기 버튼을 눌러서 `onDestroy()` 메소드가 호출하면 , 먼저 `AsyncTask`를 호출하고 바로 `super.onDestroy()`를 호출해서 Activity를 종료시킨다. 그렇게되면 Background Thread에서 AsyncTask가 실행되고 있는데 Main Thread가 종료되는 상황이다. 이렇게 되면, AsyncTask에서 다이얼로그 창을 열면서 인자로 넘겨주는 context는 이미 종료된 Activity의 것이 된다. 또한 가능성은 적지만, Background Thread(주로 AsyncTask)에서 UI를 핸들링하는 부분이 실행되기 전에 안드로이드 런타임에 의해 Activity가 정리될(위 시나리오 중 3, 4 번째에 해당) 경우에도 **BadTokenException**이 발생할 수 있다.
@@ -81,7 +79,7 @@ private class AutoSaveTask extends AsyncTask {
 원인을 정확히 알았으니 해결법은 간단하다. 해당 UI들을 사용할 때, Activity가 종료되었는 지를 확인하면된다. 만약 종료되었다면 다이얼로그 창을 열지 않으면 그만이다. 다음과 같이 `isFinishing()` 메소드를 사용하면 Activity의 종료 여부를 확인할 수 있다.
   
 ```java
-if (!ThisActivity.this.isFinishing()) {
+if (! ThisActivity.this.isFinishing()) {
     AlertDialog.builder dialog  = new AlertDialog.builder(ThisActivity.this);
     dialog.setTitle(status);
     dialog.setMessage(message);
