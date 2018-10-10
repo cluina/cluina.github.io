@@ -1,35 +1,59 @@
+# Dependencies
+markdown:         redcarpet
+pygments:         true
+# Build settings
+# markdown:               kramdown
+
+# Permalinks
+# permalink:        pretty
+# Produces a cleaner folder structure when using categories
+permalink: /:year/:month/:title.html
+
 
 
 # Setup
 title:                  blog
 tagline:                '@sangyoung.me'
 description:            '스스로 엔지니어라고 부르고 싶은 쪼렙 개발자(라고 쓰고 코더라고 읽는다) 의 본격 삽질 노트'
-
 # baseurl:                ""
 url:                    "https://blog.sangyoung.me"
+
+
+# About/contact
+author:
+    name:              Sangyoung Lee
+    profile:           "/assets/images/profiles/udc.JPG"
+    description:       "개발하고 배우고 글을 씁니다."
+    url:               https://blog.sangyoung.me
+    email:             lee@sangyoung.me
+    socials:
+        github:            "https://github.com/lee-sangyoung"
+        linkedin:          "https://www.linkedin.com/in/lee-sangyoung-381051116/"
+        facebook:          "https://www.facebook.com/sangyoung.lee.391"
+        feed:              "https://blog.sangyoung.me/feed.xml"
+
+paginate:         5
+
+# Custom vars
+version:          1.0.0
+
+github:
+    repo:           https://github.com/poole/lanyon
 
 github_username:        lee-sangyoung
 email:                  lee@sangyoung.me
 
-# About/contact
-author:
-  name:              Sangyoung Lee
-  profile:           "/assets/images/profiles/udc.JPG"
-  description:       "개발하고 배우고 글을 씁니다."
-  url:               https://blog.sangyoung.me
-  email:             lee@sangyoung.me
-  socials:
-    github:            "https://github.com/lee-sangyoung"
-    linkedin:          "https://www.linkedin.com/in/lee-sangyoung-381051116/"
-    facebook:          "https://www.facebook.com/sangyoung.lee.391"
-    feed:              "https://blog.sangyoung.me/feed.xml"
+
+# Setup
 
 
-# Build settings
-markdown:               kramdown
 
-# Produces a cleaner folder structure when using categories
-permalink: /:year/:month/:title.html
+
+
+
+
+
+
 
 sass:
   sass_dir:             assets/scss/
