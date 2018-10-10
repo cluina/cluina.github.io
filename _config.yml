@@ -5,7 +5,7 @@ title:                  blog
 tagline:                '@sangyoung.me'
 description:            '스스로 엔지니어라고 부르고 싶은 쪼렙 개발자(라고 쓰고 코더라고 읽는다) 의 본격 삽질 노트'
 
-baseurl:                ""
+# baseurl:                ""
 url:                    "https://blog.sangyoung.me"
 
 github_username:        lee-sangyoung
