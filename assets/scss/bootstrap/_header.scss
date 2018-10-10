@@ -1,0 +1,277 @@
+//
+// Headers
+// --------------------------------------------------
+
+// base class
+.header {
+  height: 220px;
+  background-size: cover;
+  background-position: center center;
+
+  @media (min-width: $screen-tablet) {
+    height: 360px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    height: 500px;
+  }
+}
+
+.header-footer {
+  position: relative;
+  top: -18px;
+
+  //.search-box-wrapper {
+  //  width: 100%;
+  //}
+
+  @media (min-width: $screen-tablet) {
+    top: -20px;
+
+    .search-box-wrapper {
+      width: 70%;
+      margin: auto;
+    }
+  }
+
+  @media (min-width: $screen-desktop) {
+    top: -28px;
+
+    .search-box-wrapper {
+
+    }
+  }
+}
+
+// Navbar Secondary
+// ---------------------------------------------
+.header-mentor {
+  height: auto;
+
+  .header-top {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    @media (min-width: $screen-md-min) {
+      height: 350px;
+    }
+
+    background: url("/images/_v2/mentors/detail_bg.jpg");
+    background-size: cover;
+
+    .header-title {
+      font-family: Exo,sans-serif;
+      font-weight: 700;
+      color: $brand-primary;
+
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include translate(-50%, -50%);
+
+      font-size: 32px;
+      @media (min-width: $screen-sm-min) {
+        font-size: 45px;
+      }
+      @media (min-width: $screen-md-min) {
+        font-size: 60px;
+      }
+      @media (min-width: $screen-lg-min) {
+        font-size: 80px;
+      }
+    }
+  }
+
+  .header-bottom {
+    background-color: #fff;
+
+    @media (min-width: $screen-sm-min) {
+      padding: 25px 0;
+    }
+
+    .mentor-profile-image {
+      position: absolute;
+      left: .5rem;
+      bottom: 0;
+
+      width: 105px;
+      @media (min-width: $screen-sm-min) {
+        width: 145px;
+      }
+      @media (min-width: $screen-md-min) {
+        width: 250px;
+      }
+    }
+
+    .mentor-name {
+      font-weight: 600;
+      font-size: 1.7rem;
+      small {
+        font-size: 55%;
+      }
+      @media (min-width: $screen-sm-min) {
+        font-size: 1.7rem;
+        small {
+          font-size: 55%;
+        }
+      }
+      @media (min-width: $screen-md-min) {
+        font-size: 1.7rem;
+        small {
+          font-size: 55%;
+        }
+      }
+    }
+
+    .btn-share {
+      position: absolute;
+      right: .5rem;
+      top: 55%;
+      @include translate(0, -50%);
+
+      font-size: 1.5rem;
+      @media (min-width: $screen-sm-min) {
+        width: 2rem;
+      }
+      @media (min-width: $screen-md-min) {
+        width: 2rem;
+      }
+
+    }
+
+    .mentor-info {
+      margin-top: .5rem;
+
+      @media (min-width: $screen-sm-min) {
+        padding-top: 0;
+        border-top: .5px solid #eee;
+        border-bottom: .5px solid #eee;
+      }
+      .mentor-statistics {
+        border: 0;
+        font-size: .92rem;
+        padding: .3rem;
+
+        @media (min-width: $screen-sm-min) {
+          font-size: .85rem;
+          padding: 1rem;
+          border-right: .5px solid #eee;
+        }
+        @media (min-width: $screen-md-min) {
+          font-size: 1rem;
+        }
+
+        .divider-horizontal {
+          padding-bottom: 20px;
+          border-top: .5px solid hsla(0,0%,39%,.2);
+          @media (min-width: $screen-sm-min) {
+            padding: 0;
+            border: 0;
+          }
+        }
+
+        &:last-child {
+          border-right: 0;
+          @media (max-width: $screen-xs-max) {
+            padding-bottom: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+// 카테고리 페이지 헤더
+// ---------------------------------------------
+.page-categories-show {
+
+  header {
+
+    .header-body {
+      height: 100%;
+      position: relative;
+
+      #title-background,
+      #title-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 70%;
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      #title-background {
+
+      }
+
+      #title-content {
+        padding-top: 60px;
+        line-height: 20px;
+        font-size: 12px;
+
+        .description {
+          margin-top: 7px;
+          color: white;
+          text-align: center;
+          font-weight: 200;
+        }
+      }
+
+
+      // 테블릿
+      @media (min-width: $screen-tablet) {
+        #title-background,
+        #title-content {
+          width: 60%;
+        }
+
+        #title-background {
+
+        }
+
+        #title-content {
+          padding-top: 80px;
+          line-height: 30px;
+          font-size: 1rem;
+
+          .description {
+
+          }
+        }
+      }
+
+      // 데스크톱
+      @media (min-width: $screen-desktop) {
+
+        #title-background,
+        #title-content {
+          width: auto;
+        }
+
+        #title-background {
+
+        }
+
+        #title-content {
+          padding-top: 95px;
+          font-size: 15px;
+
+          .description {
+            margin-top: 15px;
+          }
+        }
+
+      }
+    }
+  }
+}

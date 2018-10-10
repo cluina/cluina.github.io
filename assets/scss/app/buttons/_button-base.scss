@@ -1,0 +1,15 @@
+//
+// Base Button
+// -------------------------------------------------------------
+button {
+  &:hover,
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+
+  }
+  &:focus {
+     //transform: translateY(2px);
+  }
+}

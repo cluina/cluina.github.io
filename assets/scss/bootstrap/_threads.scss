@@ -1,0 +1,144 @@
+//
+// Threads
+// --------------------------------------------------
+
+.thread {
+
+  // TODO: 작업용
+  //max-width: 760px;
+  //margin: auto;
+  border-top: 1px solid #eee;
+
+  &:last-child {
+    border-bottom: 1px solid #eee;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    border: 1px solid #eee;
+    border-bottom: 0;
+  }
+  
+  background-color: #fff;
+
+  padding: 1rem;
+
+  img {
+    width: 100%;
+    //display: inline-block;
+    margin-top: 1rem;
+  }
+
+
+  .title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .profile-image {
+    width: 32px;
+    border-radius: 50%;
+    margin: 0;
+  }
+
+  small {
+    color: #aaa;
+    font-size: 0.8rem;
+    font-weight: 200;
+  }
+
+  //———————————————————
+  // 답변..
+  //———————————————————
+  &.thread-answer {
+    padding-left: 3.5rem;
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 1rem;
+      left: 1.2rem;
+    }
+  }
+
+  //———————————————————
+  // V1
+  //———————————————————
+  .thread-head,
+  .thread-body {
+    width: 100%;
+  }
+
+  .thread-head {
+    padding-bottom: 1rem;
+    line-height: 1.1rem;
+    position: relative;
+
+    .thread-head-left,
+    .thread-head-right,
+    .thread-head-tools {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .thread-head-left,
+    .thread-head-right {
+      vertical-align: middle;
+    }
+
+    .thread-head-left {
+      padding-right: 1rem;
+      img {
+        width: 35px;
+        max-width: inherit;
+      }
+    }
+
+    .thread-head-right {
+      width: 100%;
+    }
+
+
+    .thread-head-tools {
+      position: absolute;
+      vertical-align: top;
+      font-size: 1.2rem;
+      color: $gray-light;
+      right: 0;
+      top: 0.3rem;
+
+      button {
+        width: 1.2rem;
+        height: 1.2rem;
+        border: 0;
+        background: none;
+
+        &:hover {
+          color: $brand-primary;
+        }
+      }
+    }
+  }
+
+
+
+  //---------------------------------------
+  // V2
+  //---------------------------------------
+  .thread-left,
+  .thread-right {
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  .thread-left {
+    padding-right: 1rem;
+  }
+
+  .thread-right {
+
+    > .title {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

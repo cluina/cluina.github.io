@@ -1,0 +1,553 @@
+//
+// Column Body
+// --------------------------------------------------
+.column-body-padding-full {
+  //padding-top: 100vh;
+  //z-index: 600;
+}
+.column-body-padding-normal {
+  //padding-top: 500px;
+  //z-index: 600;
+}
+
+.column-body {
+  position: relative;
+  text-align: left;
+  word-break: break-all;
+  //z-index: 600;
+
+  // 본문 font weight
+  font-weight: 200;
+  @media (min-width: $screen-md-min) {
+    font-weight: 400;
+  }
+
+
+  // Paragraphs
+  // ------------------------------------
+  .paragraphs {
+
+    // 줄간격 강제 적용!!
+    font-family: $font-family-sans-serif !important;
+    line-height: 2 !important;
+
+
+    // Body
+    // ------------------------------------
+    // TODO: 모바일 타이포그래피
+    .txt-area {
+      font-family: $font-family-sans-serif !important;
+      color: #1a1a1a !important;
+      font-size: 17.25px !important;
+      line-height: 1.7 !important;
+
+
+      // 문단 아래쪽 마진
+      p,
+      div {
+        margin-bottom: 15px;
+      }
+
+      // 리스트 스타일
+      ul,
+      ol {
+        padding-left: 24px;
+      }
+
+      // 본문 타이포
+      p,
+      b,
+      i,
+      ul,
+      ol,
+      li,
+      em,
+      div,
+      span,
+      font {
+        color: #1a1a1a !important;
+        font-size: 17.25px !important;
+        line-height: 1.7 !important;
+        font-family: $font-family-sans-serif !important;
+        @media (min-width: $screen-md-min) {
+          font-family: $font-family-sans-serif-desktop !important;
+        }
+        span {
+          font-family: $font-family-sans-serif !important;
+          @media (min-width: $screen-md-min) {
+            font-family: $font-family-sans-serif-desktop !important;
+          }
+        }
+      }
+
+      // font weight 설정
+      p,
+      i,
+      ul,
+      ol,
+      li,
+      em,
+      div,
+      span,
+      font {
+        font-weight: 200 !important;
+      }
+
+      b {
+        font-weight: 600 !important;
+      }
+
+      // TODO: 데스크톱 타이포그래피
+      @media (min-width: $screen-md-min) {
+
+        font-family: $font-family-sans-serif-desktop !important;
+        font-size: 16px !important;
+        line-height: 2 !important;
+
+        p,
+        b,
+        i,
+        ul,
+        ol,
+        li,
+        em,
+        div,
+        span,
+        font {
+          color: #333;
+          font-size: 16px !important;
+          line-height: 2 !important;
+          font-family: $font-family-sans-serif !important;
+          @media (min-width: $screen-md-min) {
+            font-family: $font-family-sans-serif-desktop !important;
+          }
+          span {
+            font-family: $font-family-sans-serif !important;
+            @media (min-width: $screen-md-min) {
+              font-family: $font-family-sans-serif-desktop !important;
+            }
+          }
+        }
+
+        // font weight 설정
+        p,
+        i,
+        ul,
+        ol,
+        li,
+        em,
+        div,
+        span,
+        font {
+          font-weight: 200 !important;
+        }
+
+        b {
+          font-weight: 600 !important;
+        }
+      }
+
+      // Headings
+      // ------------------------------------
+      //
+      // h1, h2 : 페이지 레벨에서 사용하는 헤딩
+      // h3, h4, h5 : 칼럼 본문의 소제목과 강조 문장
+      // h6 : 사용 안함
+
+      h1 {
+        display: none;
+      }
+      h2 {
+        display: none;
+      }
+      h6 {
+        display: none;
+      }
+      h3, h4, h5 {
+        font-weight: 600;
+        line-height: 1.5;
+        word-break: keep-all;
+
+        p,
+        b,
+        i,
+        ul,
+        ol,
+        li,
+        em,
+        div,
+        span,
+        font {
+          font-weight: 600 !important;
+        }
+      }
+
+      // TODO: 모다일 헤딩
+      h3 {
+        font-size: 21.5px !important;
+
+        p,
+        b,
+        i,
+        ul,
+        ol,
+        li,
+        em,
+        div,
+        span,
+        font {
+          font-size: 21.5px !important;
+        }
+      }
+      h4 {
+        font-size: 19.375px !important;
+
+        p,
+        b,
+        i,
+        ul,
+        ol,
+        li,
+        em,
+        div,
+        span,
+        font {
+          font-size: 19.375px !important;
+        }
+      }
+      h5 {
+        font-size: 17.25px !important;
+
+        p,
+        b,
+        i,
+        ul,
+        ol,
+        li,
+        em,
+        div,
+        span,
+        font {
+          font-size: 17.25px !important;
+        }
+      }
+
+      // TODO: 데스크톱 헤딩
+      @media (min-width: $screen-md-min) {
+        h3 {
+          font-size: 21px !important;
+
+          p,
+          b,
+          i,
+          ul,
+          ol,
+          li,
+          em,
+          div,
+          span,
+          font {
+            font-size: 21px !important;
+          }
+        }
+        h4 {
+          font-size: 18px !important;
+
+          p,
+          b,
+          i,
+          ul,
+          ol,
+          li,
+          em,
+          div,
+          span,
+          font {
+            font-size: 18px !important;
+          }
+        }
+        h5 {
+          font-size: 16px !important;
+
+          p,
+          b,
+          i,
+          ul,
+          ol,
+          li,
+          em,
+          div,
+          span,
+          font {
+            font-size: 16px !important;
+          }
+        }
+      }
+
+
+      // Block Quote
+      // ------------------------------------
+      blockquote {
+        font-size: 16px;
+        @media (min-width: $screen-md-min) {
+          font-size: 15px;
+        }
+
+        p,
+        b,
+        i,
+        ul,
+        ol,
+        li,
+        em,
+        div,
+        span,
+        font {
+          font-size: 16px !important;
+          line-height: 2 !important;
+          font-style: italic !important;
+          color: #999 !important;
+          font-weight: 400 !important;
+          @media (min-width: $screen-md-min) {
+            font-size: 15px !important;
+          }
+        }
+
+        quotes: "\201C" "\201D" "\2018" "\2019";
+        line-height: 2 !important;
+        font-style: italic !important;
+        color: #999 !important;
+
+        // 왼쪽 바 + 쌍따옴표 있는 스타일
+        //border-left: 8px solid #ccc;
+        //padding: .5rem 0 .5rem 2rem;
+
+        // 쌍타옴표만 있는 스타일
+        border: 0;
+        padding: 1.5rem;
+
+        &:before {
+          content: open-quote;
+          display: inline;
+          height: 0;
+          line-height: 0;
+          position: relative;
+          color: #ccc;
+          font-size: 6rem;
+
+          // 왼쪽 바 + 쌍따옴표 있는 스타일
+          //top: 28px;
+          //left: -20px;
+
+          // 쌍타옴표만 있는 스타일
+          top: 30px;
+          left: -25px;
+        }
+
+        &:after {
+          content: close-quote;
+          opacity: 0;
+        }
+
+        footer {
+          margin: 0;
+          text-align: right;
+          font-size: 1em;
+          font-style: italic;
+        }
+      }
+    }
+  }
+
+
+
+  // 간격 조정용
+  .paragraphs {
+    margin-bottom: 2rem;
+
+    &:first-child {
+      padding-top: 2rem;
+    }
+    &:last-child {
+      padding-bottom: 2rem;
+    }
+
+    // Medias
+    // ------------------------------------
+    .media-div {
+      margin-left: -1rem;
+      //margin-right: -1rem;
+
+      img.image {
+        width: 100vw;
+      }
+
+      @media (min-width: $screen-sm-min) {
+        margin-left: 0;
+        //margin-right: 0;
+
+        img.image {
+          width: 100%;
+        }
+      }
+
+      .media-footnote {
+        color: #999;
+        font-size: .85rem;
+        font-weight: 200;
+        text-align: center;
+        width: 100vW;
+        padding: 0 1rem;
+        @media (min-width: $screen-sm-min) {
+          width: 100%;
+          padding: 0;
+        }
+
+        .footnote {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+
+  // Media Sources
+  // ------------------------------------
+  .source-paragraph {
+    position: relative;
+    margin-top: 5rem;
+    padding-top: 2rem;
+    color: #999;
+    font-size: .85rem;
+    font-weight: 200;
+
+    //border-top: 1px solid #eee;
+
+    &:before {
+      content: "미디어 출처";
+      color: #333;
+      font-size: 1rem;
+      font-weight: 400;
+      border-bottom: 1px solid #eee;
+      width: calc(100% - 1rem);
+      margin: 0 auto .8rem;
+      padding-bottom: .8rem;
+
+      @media (min-width: $screen-sm-min) {
+        width: calc(100% - 1.5rem);
+      }
+    }
+
+    .sources {
+      margin-bottom: .7rem;
+      line-height: 1.4;
+    }
+  }
+
+
+
+  // Mentor Profile
+  // ------------------------------------
+  .card-profile-wrapper {
+
+    @media (min-width: $screen-lg-min) {
+      position: absolute;
+      top: 30px;
+      margin: 0;
+      width: 200px;
+      right: 0;
+      transform: translateX(120%);
+    }
+  }
+
+  .card-mentor-profile {
+    background-color: transparent;
+
+    .card-label {
+
+      padding: 5rem 0;
+      background-color: transparent;
+      border: none;
+
+      img {
+        width: 80px;
+      }
+
+      .card-label-title {
+        font-size: 1rem;
+      }
+
+      .card-label-subtitle {
+        font-size: .8rem;
+      }
+
+      @media (min-width: $screen-lg-min) {
+        padding: 1rem;
+        background-color: #fff;
+        border: 1px solid #eee;
+      }
+    }
+
+    a.btn {
+      border-radius: 0;
+    }
+  }
+}
+
+
+// Replies
+// ------------------------------------
+.reply-box {
+  padding: 1rem;
+  @media (min-width: $screen-sm-min) {
+    padding: 1rem 0;
+  }
+
+  textarea {
+    resize: none;
+
+    border: 1px solid #eee;
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    width: 100%;
+    height: 80px;
+
+    &:focus {
+      border-color: #eee;
+    }
+    &[disabled] {
+      background-color: #fff;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      height: 100px;
+    }
+  }
+
+  .reply-counter {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-top: 0;
+    border-radius: 0 0 3px 3px;
+    text-align: right;
+    margin-bottom: .5rem;
+    padding: .5rem;
+    //color: #aaa;
+  }
+
+}
+
+
+// Arrow Down
+// ------------------------------------
+.icon-arrow-down {
+  position: absolute;
+  bottom: 2.6em;
+  right: 1rem;
+  @media (min-width: $screen-sm-min) {
+    bottom: 4rem;
+    right: 0;
+  }
+}

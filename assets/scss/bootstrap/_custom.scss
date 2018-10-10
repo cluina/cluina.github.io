@@ -1,0 +1,120 @@
+
+//-------------------------------------------------
+// Alignment
+// type.scss 활성화시 제거
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+//-------------------------------------------------
+
+.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #ddd;
+  border-radius: 0;
+}
+
+.profile-image,
+.profile-img {
+  border-radius: 50%;
+}
+
+.background-logo {
+  position: fixed;
+  width: 730px;
+  bottom: 80px;
+  right: -140px;
+  z-index: -1;
+}
+
+.column-empty-logo {
+  padding: 1rem 1rem 2rem 1rem;
+  @media (min-width: $screen-sm-min) {
+    padding: 1rem 0 0 2rem;
+  }
+}
+.price-question {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.btn-question-prepare {
+  height: 40px;
+
+  img {
+    width: 30px;
+  }
+}
+.no-item {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  @include translate(0, -50%);
+}
+
+.link-gray {
+  color: #333;
+  opacity: .5;
+
+  &:hover,
+  &:focus {
+    color: #333;
+    opacity: 1;
+  }
+}
+.btn-rounded {
+  border-radius: 999px;
+}
+.btn-edged {
+  border-radius: 0 !important;
+}
+.btn-share {
+  background: none;
+  font-size: 20px;
+  padding: 2px 5px 2px 12px;
+}
+.btn-favorite {
+  position: relative;
+  padding-left: 33px;
+  font-size: 15px;
+
+  &:hover,
+  &:focus {
+    background-color: #fff !important;
+  }
+
+  &.active {
+    background-color: #fff !important;
+
+    .heart {
+      transition-duration: 1300ms;
+      background-position: -1400px 0;
+    }
+  }
+
+  .heart {
+    position: absolute;
+    top: 50%;
+    @include translate(0, -50%);
+
+    width: 50px;
+    height: 50px;
+    left: -7px;
+
+
+    background: url("/images/_v2/icons/heart-ani.png") no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    transition: background-position 1s steps(28);
+    transition-duration: 0s;
+
+    &.is-active {
+      transition-duration: 800ms;
+      background-position: -2800px 0;
+    }
+  }
+}
+

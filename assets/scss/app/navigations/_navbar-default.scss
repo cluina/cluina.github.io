@@ -1,0 +1,62 @@
+
+.navbar-default {
+  background-color: #0d0d0d;
+  //border-bottom: 1px solid #ddd;
+  -webkit-box-shadow: 0 4px 6px rgba(0,0,0,0.35);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.35);
+
+  .navbar-brand {
+    width: 201px;
+    padding: 15px;
+    float: none;
+    h4 {
+      margin: 0;
+      color: #fff;
+      small {
+        color: #aaa;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    border: 0;
+    padding: 22px 1rem 20px;
+    margin: 0 0 0 -1rem;
+    .icon-bar {
+      background-color: #fff;
+      &.middle {
+        //width: 70%;
+      }
+    }
+  }
+
+  .nav-swipe-btn {
+    width: 40px;
+    height: 45px;
+  }
+
+  .navbar-nav {
+    li {
+      a {
+        padding-top: 25.5px;
+        padding-bottom: 25.5px;
+      }
+    }
+  }
+
+  ul {
+    li {
+      a {
+
+        background: none;
+        color: #fff;
+
+        &:hover,
+        &:focus {
+          /*color: #eee;*/
+          color: $brand-primary;
+        }
+      }
+    }
+  }
+}

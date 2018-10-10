@@ -1,0 +1,13 @@
+//
+// Icon Button
+// -------------------------------------------------------------
+
+.btn-icon {
+  position: relative;
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%)
+  }
+}

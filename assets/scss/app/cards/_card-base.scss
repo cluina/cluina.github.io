@@ -1,0 +1,79 @@
+//
+// Base Card
+// -------------------------------------------------------------
+.card {
+  width: 100%;
+  padding: 1rem;
+  background-color: #fff;
+  margin-bottom: 2px;
+  position: relative;
+
+
+  // ...
+  //border-bottom: 1px solid #ddd;
+  //
+  //&:first-child {
+  //  border-top: 1px solid #ddd;
+  //}
+  //
+  //@media (min-width: $screen-sm-min) {
+  //  border-left: 1px solid #ddd;
+  //  border-right: 1px solid #ddd;
+  //}
+
+  .card-body {
+    padding-bottom: 2.2rem;
+
+    // 타이틀
+    // ----------------------------------------
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0 0 1rem;
+    }
+
+    a {
+      color: $text-color;
+
+      @media (min-width: $screen-desktop) {
+        &:hover,
+        &:active {
+          color: $gray-light;
+        }
+      }
+    }
+  }
+
+
+  // 썸네일 이미지
+  // ----------------------------------------
+  .thumbnail {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+  }
+  .with-thumbnail {
+    //float: left;
+    min-height: 120 + ($font-size-base  * 2);
+    padding-right: 120px + $font-size-base;
+  }
+
+  .card-foot {
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    margin: 0;
+    padding-top: 1rem;
+
+    .name {
+      margin-right: 8px;
+    }
+  }
+}

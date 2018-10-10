@@ -1,0 +1,49 @@
+//
+// Bottom Navbar
+// --------------------------------------------------
+
+// 페이지 하단에 따라다니는 네비게이션 바
+
+.bottom-navigation {
+  min-height: 50px;
+  z-index: 300;
+
+  .row {
+    display: table;
+    width: 100%;
+    margin: 0;
+
+    .col {
+      display: table-cell;
+      padding: 0.6rem 0 0.6rem 0.6rem;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &.share-button-wrapper {
+        width: 40px;
+      }
+
+      .btn {
+        width: 100%;
+        height: 40px;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 8px 12px;
+
+        &.btn-share {
+          width: 40px;
+          font-size: 1.3rem;
+          padding: 2px;
+        }
+
+        > img {
+          width: 24px;
+          margin-left: 10px;
+          margin-bottom: 1px;
+        }
+      }
+    }
+  }
+}

@@ -3,7 +3,9 @@ layout: post
 title: "안드로이드 BadTokenException 의 원인과 해결방법"
 description: "안드로이드 앱을 테스트하다보면 UI를 핸들링할 때, 가끔 BadTokenException이 발생하는 것을 볼 수가 있다. 보통 빌드 시에는 알 수 없고, 런타임 시점에서 발생하는 점에서 약간 골치가 아프다."
 date: 2016-12-28 14:50:00
+category: "ANDROID"
 tags: [Android, Exception, BadTokenException]
+image: "https://developer.android.com/static/images/home/jetpack-promo.svg?hl=ko"
 ---
 
 

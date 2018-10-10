@@ -1,22 +1,63 @@
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
-# relative_permalinks: true
+
 
 # Setup
-title:               blog
-tagline:             '@Sangyoung.me'
-description:         '스스로 엔지니어라고 부르고 싶은 쪼렙 개발자(라고 쓰고 코더라고 읽는다) 의 본격 삽질 노트'
-url:                 http://blog.sangyoung.me
-baseurl:             ''
-paginate:            5
+title:                  blog
+tagline:                '@sangyoung.me'
+description:            '스스로 엔지니어라고 부르고 싶은 쪼렙 개발자(라고 쓰고 코더라고 읽는다) 의 본격 삽질 노트'
+
+baseurl:                ""
+url:                    "https://blog.sangyoung.me"
+
+github_username:        lee-sangyoung
+email:                  lee@sangyoung.me
 
 # About/contact
 author:
   name:              Sangyoung Lee
-  url:               https://twitter.com/Cluina
-  email:             humanfly.fc@gmail.com
+  profile:           "/assets/images/profiles/udc.JPG"
+  description:       "개발하고 배우고 글을 씁니다."
+  url:               https://blog.sangyoung.me
+  email:             lee@sangyoung.me
+  socials:
+    github:            "https://github.com/lee-sangyoung"
+    linkedin:          "https://www.linkedin.com/in/lee-sangyoung-381051116/"
+    facebook:          "https://www.facebook.com/sangyoung.lee.391"
+    feed:              "https://blog.sangyoung.me/feed.xml"
 
-# Custom vars
-version:             1.1.0
+
+# Build settings
+markdown:               kramdown
+
+# Produces a cleaner folder structure when using categories
+permalink: /:year/:month/:title.html
+
+sass:
+  sass_dir:             assets/scss/
+  style:                compressed
+
+plugins:
+  - jekyll-paginate-v2
+  - jekyll-feed
+
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page/:num/'
+  title: ' - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

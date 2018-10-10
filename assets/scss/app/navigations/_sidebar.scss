@@ -1,0 +1,35 @@
+.back-to-home {
+  img {
+    width: 18px;
+    margin-top: -3px;
+  }
+}
+
+.sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top : 100px;
+
+  width: calc(100% - 1rem);
+  margin-top: 30px;
+  margin-right: 1rem;
+  padding-right: 2rem;
+  border-right: 1px solid #eee;
+
+  font-size: 13px;
+  text-align: right;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      a {
+        color: #bbb;
+        &:hover,
+        &:focus {
+          color: $brand-primary;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,155 @@
+//
+// Boxes
+// --------------------------------------------------
+
+
+// Base class
+.box{
+  display: block;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: white;
+  margin-bottom: 1rem;
+  @media (min-width: $screen-md-min) {
+    margin-bottom: 1.5rem;
+  }
+
+  .box-header {
+    font-size: 1.1rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #eee;
+  }
+  .box-body {
+
+  }
+}
+
+
+
+// Box Utils
+// ---------------------------------------------
+.box-fit {
+    width: 100%;
+}
+
+.box-relative {
+  position: relative;
+}
+.box-default-padding {
+  padding: 1rem;
+}
+.box-default-padding-xs {
+  @media (max-width: $screen-xs-max) {
+    padding: 1rem;
+  }
+}
+.box-half-padding {
+  padding: .5rem;
+}
+.box-half-padding-xs {
+  @media (max-width: $screen-xs-max) {
+    padding: .5rem;
+  }
+}
+
+.box-full-height {
+  height: 100%;
+}
+.box-default-height {
+  min-height: 300px;
+  @media (min-width: $screen-sm-min) {
+    min-height: 450px;
+  }
+}
+
+
+
+// Box Components
+// ---------------------------------------------
+.box-border-top-primary {
+  border-top: 5px solid $brand-primary;
+  margin-bottom: 8px;
+}
+
+.box-border-top-gray {
+  border-top: 5px solid #ccc;
+  margin-bottom: 2rem;
+}
+
+.box-donation {
+  position: relative;
+  margin-bottom: 1rem;
+  @media (min-width: $screen-md-min) {
+    margin-bottom: 1.5rem;
+  }
+  padding: 1.5rem 0 1.5rem 3rem;
+  outline: 1px solid hsla(0,0%,39%,.2);
+  outline-offset: -7px;
+  background-color: #fff;
+
+  img {
+    width: 85px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    @include translate(0, -50%);
+
+    @media (min-width: $screen-md-min) {
+      width: 60px;
+      left: -5px;
+    }
+    @media (min-width: $screen-lg-min) {
+      width: 85px;
+      left: 0;
+    }
+  }
+}
+
+.box-group {
+  border: 1px solid #eee;
+
+  img {
+    //width: 100%;
+    max-width: 100%;
+  }
+
+  .box-list {
+    .thread {
+      border-left: 0;
+      border-right: 0;
+    }
+  }
+}
+.box-list {
+
+  margin-bottom: 0;
+
+  .thread {
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+}
+
+.mentor-description {
+  h2.subtitle {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

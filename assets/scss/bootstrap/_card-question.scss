@@ -1,0 +1,118 @@
+//
+// Card Question
+// --------------------------------------------------
+
+
+// Card Question Default
+// ------------------------------------
+.card-question {
+    background-color: #fff;
+    border: 1px solid #eee;
+    margin-bottom: 1rem;
+
+    .symbol-question {
+        color: $brand-primary;
+        font-family: 'Exo', sans-serif;
+        font-weight: 700;
+
+        &.addon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            @include translate(0, -50%);
+
+            &+input {
+                padding-left: 35px;
+            }
+        }
+    }
+
+    .card-question-head {
+        position: relative;
+        padding: 1.2rem 1rem 1.2rem;
+        border-bottom: 1px solid #eee;
+
+        .question-title {
+            margin-top: 0;
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+
+        p {
+            position: relative;
+            margin: 0;
+
+            .btn-share {
+                position: absolute;
+                padding-right: 0;
+                right: 0;
+                top: 50%;
+                @include translate(0, -50%);
+
+                color: #cfcfcf;
+                @media (min-width: $screen-sm-min) {
+                    &:hover,
+                    &:focus {
+                        color: #666;
+                    }
+                }
+            }
+        }
+    }
+
+    .card-question-body {
+        padding: 2rem 1rem;
+        line-height: 1.6;
+    }
+
+    .form-air {
+        width: 100%;
+        -webkit-appearance: none;
+        appearance: none;
+        border: 0;
+        resize: none;
+
+        &:focus,
+        &:active {
+            outline: 0;
+        }
+
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #aaa !important;
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+            color: #aaa !important;
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+            color: #aaa !important;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+            color: #aaa !important;
+        }
+        &::placeholder {
+            color: #aaa !important;
+        }
+    }
+
+    hr {
+        margin: 1.5rem 0;
+        border-top: 1px solid #eee;
+    }
+
+    .btn-question {
+
+    }
+
+    .notice-question-secret {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    &.border-bold {
+        border: 1px solid #ddd;
+
+        .card-question-head {
+            border-bottom: 1px solid #ddd;
+        }
+    }
+}

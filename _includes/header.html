@@ -1,0 +1,52 @@
+<header>
+    <nav class="navbar navbar-default navbar-fixed-top" :class="{'navbar-compact': isScrolled, 'navbar-hidden': isHidden}">
+        <div id="nav-container" class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar middle"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ site.baseurl }}/" title="Home">
+                    <h4>
+                        {{ site.title }}
+                        <small>{{ site.tagline }}</small>
+                    </h4>
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse">
+                <!--<ul class="nav navbar-nav">-->
+                <!--<li class="active"><a href="/">홈</a></li>-->
+                <!--<li><a href="/questions/create">질문하기</a></li>-->
+                <!--</ul>-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/about">about</a></li>
+                    <li><a href="/contact">contact</a></li>
+                </ul>
+            </div>
+        </div><!-- /.container -->
+
+        <!--<div class="bg-white">-->
+            <!--<div class="container no-padding-xs">-->
+                <!--<div class="nav-swipe-wrapper">-->
+                    <!--<ul class="nav nav-pills nav-swipe" :class="{'extended' : isExtended}">-->
+                        <!--<li class="active"><a href="">홈</a></li>-->
+                        <!--<li class=""><a href="#">블록체인</a></li>-->
+                        <!--<li class=""><a href="#">Javascript</a></li>-->
+                        <!--<li class=""><a href="#">Vuejs</a></li>-->
+                        <!--<li class=""><a href="#">HTML</a></li>-->
+                        <!--<li class=""><a href="#">CSS</a></li>-->
+                        <!--<li class=""><a href="#">일상</a></li>-->
+                        <!--<li v-for="category in categories" :key="category.uuid"><a :href="category.path">{{ category.name }}</a></li>-->
+                    <!--</ul>-->
+                    <!--<button class="nav-swipe-btn btn-icon hidden-md hidden-lg" @click="isExtended = !isExtended">-->
+                        <!--<i v-if="!isExtended" class="icon icon-angle-down text-bold"></i>-->
+                        <!--<i v-else class="icon icon-cancel text-bold"></i>-->
+                    <!--</button>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </nav>
+</header>

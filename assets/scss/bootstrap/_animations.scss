@@ -1,0 +1,81 @@
+//
+// Animations
+// --------------------------------------------------
+
+
+// 1. bounce
+// ------------------------------------
+.animation-bounce {
+    @include animation(bounce 2s infinite);
+}
+
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        @include translate(0, 0);
+    }
+    40% {
+        @include translate(0, -30px);
+    }
+    60% {
+        @include translate(0, -15px);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        @include translate(0, 0);
+    }
+    40% {
+        @include translate(0, -30px);
+    }
+    60% {
+        @include translate(0, -15px);
+    }
+}
+
+// 2. bounce little
+// ------------------------------------
+.animation-bounce-little {
+    @include animation(bounce-little 2s infinite);
+}
+
+@-webkit-keyframes bounce-little {
+    0%, 20%, 50%, 80%, 100% {
+        @include translate(-50%, 0);
+    }
+    40% {
+        @include translate(-50%, -10px);
+    }
+    60% {
+        @include translate(-50%, -5px);
+    }
+}
+
+@keyframes bounce-little {
+    0%, 20%, 50%, 80%, 100% {
+        @include translate(-50%, 0);
+    }
+    40% {
+        @include translate(-50%, -10px);
+    }
+    60% {
+        @include translate(-50%, -5px);
+    }
+}
+
+// 3. loader
+// ------------------------------------
+@-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0) }
+    40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    } 40% {
+          -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+      }
+}

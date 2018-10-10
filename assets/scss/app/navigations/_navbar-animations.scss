@@ -1,0 +1,44 @@
+
+
+.navbar-default {
+  -webkit-transition: .4s cubic-bezier(.22,.61,.36,1);
+  transition: .4s cubic-bezier(.22,.61,.36,1);
+
+  .navbar-toggle,
+  .navbar-brand,
+  .form-search-xs,
+  .search-btn {
+    -webkit-transition: .3s cubic-bezier(.22,.61,.36,1);
+    transition: .3s cubic-bezier(.22,.61,.36,1);
+  }
+}
+
+.navbar-compact {
+
+  &.navbar-default {
+    transform: translate(0, -50px);
+  }
+
+  &.navbar-hidden {
+    transform: translate(0, -110%);
+    //transform: translate(0, -100px);
+  }
+
+  .navbar-toggle {
+    transform: translate(0, 50px);
+  }
+
+  .navbar-brand {
+    transform: translate(-50%, -50px);
+    opacity: 0;
+  }
+
+  // 입력폼
+  .form-search-xs {
+    width: calc(100% - 36px);
+    transform: translate(0, 5px);
+  }
+  .search-btn {
+    transform: translate(0, 5px);
+  }
+}

@@ -1,0 +1,265 @@
+//
+// Left Modal
+// -------------------------------------------------------------
+
+//  왼쪽 고정 모달
+.modal-fixed-left {
+
+  width: 100%;
+
+  .btn-group {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    > a {
+      width: 50%;
+      padding-top: 10px;
+      padding-bottom: 25px;
+      border-radius: 0;
+      font-size: .85rem !important;
+
+      &:first-child {
+        border-left: 0;
+      }
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+
+  button.close {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    right: -55px;
+    top: 15px;
+    background-color: #fff;
+    opacity: 1;
+    border-radius: 50%;
+
+    span {
+      background-color: #666;
+      left: 14px;
+      top: 48%;
+      @include transition(transfrom 13s ease-in-out);
+
+      &:first-child {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      &:last-child {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  &.in {
+    button.close {
+      span {
+        &:first-child {
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+
+        &:last-child {
+          -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+        }
+      }
+    }
+  }
+
+  ul.row {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    a {
+      .fa-plus {
+        @include transition(transform .2s ease);
+      }
+    }
+
+    ul {
+      //display: none !important;
+      list-style: none;
+      overflow: hidden;
+      height: auto;
+      max-height: 0;
+      padding: 0;
+      @include transition(all .3s ease-in-out);
+
+      li {
+        padding: 0;
+        border-top: 0;
+
+        a {
+          padding: 1rem 1rem 1rem 1.5rem;
+        }
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    .select-category {
+      &:checked {
+        &+a {
+          .fa-plus {
+            transform: rotate(45deg);
+          }
+        }
+
+        & ~ ul {
+          //display: block !important;
+          max-height: 500px;
+
+          li {
+            a {
+              //padding: 1rem 1rem 1rem 1.5rem;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  li.col-xs-12 {
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+
+    &:first-child {
+
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    a {
+      padding: 1rem;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+
+    &.navbar-mobile-kakao {
+      padding: .5rem .7rem;
+
+      svg,
+      span {
+        float: left;
+      }
+
+      span {
+        padding-top: 0.6rem;
+        padding-left: .5rem;
+      }
+
+      svg {
+        g {
+          path {
+            fill: #555;
+          }
+        }
+      }
+    }
+  }
+
+  // 모달 애니메이션
+  &.modal {
+
+    .modal-dialog {
+      z-index: $zindex-modal;
+      @include transition-transform(0.2s ease-in);
+    }
+
+    &.fade .modal-dialog {
+      @include translate(-100%, 0);
+      @include transition-transform(0.2s ease-in-out);
+    }
+    &.in .modal-dialog {
+      @include translate(0, 0);
+
+    }
+  }
+
+  .btn-fold{
+    //background-color: #fff;
+    background-color: rgb(221, 221, 221);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 5px 25px 2px;
+  }
+
+  // 데스크톱
+  @media (min-width: $screen-desktop) {
+    &.modal {
+      .modal-dialog {
+
+      }
+    }
+  }
+
+  .modal-dialog {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    top: 0;
+    width: 300px;
+    max-width: 80%;
+    height: 100%;
+
+    .modal-content {
+      margin: 0;
+      border: 0;
+      border-radius: 0;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      width: 100%;
+      height: 100%;
+      //background-color: #595959;
+
+      .modal-body {
+        overflow-y: auto;
+        height: 100%;
+        //padding: 20px 1rem 150px;
+
+        h1 {
+          margin: 0;
+        }
+
+        hr {
+          margin: 15px 0;
+        }
+
+        textarea {
+          min-height: 70px;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          background-color: #f9f9f9;
+
+          resize:none;
+        }
+
+        .btn {
+          height: 32px;
+          font-size: 1rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

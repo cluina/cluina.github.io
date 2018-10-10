@@ -1,10 +1,6 @@
 ---
-layout: page
+layout: about
 title: About me
----
-
-<img src="/public/images/sy_lee_1x1.jpeg" style="border-radius: 5em; width: 130px;">
-
 ---
 
 - **여덟,** 동네형 따라서 다닌 컴퓨터 학원에서 `GW-BASIC`으로 컴퓨터와 처음 만남.

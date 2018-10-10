@@ -1,0 +1,25 @@
+//
+// Modal Share
+// --------------------------------------------------
+
+.modal-share {
+
+    .modal {
+
+        // When fading in the modal, animate it to slide down
+        &.fade .modal-dialog {
+            @include translate(0, -10%);
+            @include transition-transform(0.3s ease-out);
+        }
+        &.in .modal-dialog { @include translate(0, 0) }
+    }
+
+    .modal-dialog {
+        top: 40%;
+        width: 300px;
+
+        button {
+            background: none;
+        }
+    }
+}

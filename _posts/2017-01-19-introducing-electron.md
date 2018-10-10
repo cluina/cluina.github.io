@@ -3,8 +3,9 @@ layout: post
 title: "Electron, 웹기술로 크로스플랫폼 데스크톱 앱 만들기"
 description: "Electron 은 깃헙(Github)에서 Atom 에디터를 만들기 위해 만든 것이다. Atom 은 HTML5, CSS, Javascript 등 순수하게 웹기술로 구현되었는데, 프레임워크를 따로 분리해서  Atom-shell 이라는 이름으로 공개했다. 후에 Electron 이라는 명칭으로 변경했다."
 date: 2017-01-19 20:20:00
+category: "JAVASCRIPT"
 tags: [Javascript, Electron, Node.js, "삽질"]
-image: "https://camo.githubusercontent.com/5dd01312b30468423cb45b582b83773f5a9019bb/687474703a2f2f656c656374726f6e2e61746f6d2e696f2f696d616765732f656c656374726f6e2d6c6f676f2e737667"
+image: "https://i.ytimg.com/vi/iyjM39a0MWE/maxresdefault.jpg"
 ---
 
 IT 분야 중 웹(Web)은 가장 역동적으로 발전하고 있는 분야 중 하나다. 그 중에서도 최근 가장 HOT한 언어를 꼽으라면 가장 먼저 생각나는 것이 **Javascript** 다! HTML5 등장 이후로 웹 개발에서 프론트엔드의 비중이 높아졌고, Javascript 의 생태계는 비약적으로 발전했다. 
@@ -16,8 +17,6 @@ IT 분야 중 웹(Web)은 가장 역동적으로 발전하고 있는 분야 중 
 Javascript 에 관심이 전혀 없던 나의 생각을 고쳐준 것은 협업툴 **Slack** 과 **Atom** 에디터였다. 둘 다 굉장히 예쁜 UI를 가진 데스크톱 앱(*Java 의  Swing 으로 만든 UI는 정말 안예쁘다*)이었는데, 이게 웹기술로 만들었다는 충격적인 사실을 알게되었다. 웹기술이라니.. 내가 항상 쓰던 HTML5, CSS, Javascript 로도 데스크톱 앱을 만들 수 있다니! Javascript 로 브라우저를 벗어나 서버를 만들더니 이젠 데스크톱 앱까지 만들 수 있다. 한계가 어디까지인지 모를 일이다.
 
 ## Electron 소개
-
-![][electron]
 
 Electron 은 깃헙(Github)에서 Atom 에디터를 만들기 위해 만든 것이다. Atom 은 HTML5, CSS, Javascript 등 순수하게 웹기술로 구현되었는데, 프레임워크를 따로 분리해서  Atom-shell 이라는 이름으로 공개했다. 후에 Electron 이라는 명칭으로 변경했다. 내부적으로 ***Main Process 는 Node.js 로, Renderer Process 는 구글의 오픈소스 브라우져인 크로미움을 기반으로 되어있다.*** 모두 웹기술이며, 크로스 플랫폼이 가능한 스택이다. 멋지지 않은가?
 
@@ -67,7 +66,6 @@ Electron 개발 경험은 아직 걸음마 단계여서 깊이 있는 내용을 
 *덧. 첫번째 작업은 유구한 전통에 따라 Hello World 를 찍어보겠다*
 
 
-[electron]:	https://camo.githubusercontent.com/5dd01312b30468423cb45b582b83773f5a9019bb/687474703a2f2f656c656374726f6e2e61746f6d2e696f2f696d616765732f656c656374726f6e2d6c6f676f2e737667 "Electron"
 [atom]: https://cdn-business.discourse.org/uploads/github_atom/487/cda7a1c2ac02fd3d.png "Atom"
 [slack]: https://inteamwetrust.files.wordpress.com/2016/05/slack-logo.jpg "Slack"
 [vs-code]: http://2434zd29misd3e4a4f1e73ki.wpengine.netdna-cdn.com/wp-content/uploads/2015/05/VS_rgb_Purple_D-800x227.png "Visual Studio Code"

@@ -1,0 +1,19 @@
+//
+// Button Ripple
+// -------------------------------------------------------------
+
+.btn-ripple {
+  background-position: center;
+  transition: background 0.8s;
+
+  &:hover {
+    background: #1fc7c1 radial-gradient(circle, transparent 1%, #1fc7c1 1%) center/25000%;
+  }
+
+  &:active {
+    transform: translateY(2px);
+    background-color: #efefef;
+    background-size: 100%;
+    transition: background 0s;
+  }
+}

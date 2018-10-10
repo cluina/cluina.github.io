@@ -1,0 +1,164 @@
+//
+// Checkbox
+// --------------------------------------------------
+
+input[type="checkbox"] {
+  display:none;
+
+  &+label {
+    position: relative;
+    cursor: pointer;
+    height: 15px;
+
+    > span {
+      display: inline-block;
+      vertical-align: middle;
+      height: 20px;
+      padding-left: 18px;
+      margin-top: -6px;
+
+      color: #999;
+      font-size: 11px;
+      font-weight: 400;
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+    }
+
+    &:before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 2px solid #999;
+    }
+
+    &:after {
+      //opacity: 0;
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      -o-transform: scale(0);
+      transform: scale(0);
+      content: "";
+      background: url("/images/_v2/components/forms/check.svg") no-repeat;
+      background-size: cover;
+      transition: transform .12s ease-in-out;
+      width: 13px;
+      height: 11px;
+      top: 2px;
+      left: 1px;
+    }
+
+  }
+
+  &:hover,
+  &:focus {
+
+    &+label {
+
+      > span {
+        color:  $brand-primary;
+      }
+
+      &:before {
+        border-color: $brand-primary;
+      }
+    }
+  }
+
+
+  &:checked {
+
+    &+label {
+
+      > span {
+        color:  $brand-primary;
+      }
+
+      &:before {
+        border-color: $brand-primary;
+      }
+
+      &:after {
+        //opacity: 1;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+  }
+
+  // Checkbox Sizes
+  // -----------------------------------------
+  &.checkbox-md {
+    &+label {
+
+      > span {
+        height: 23px;
+        margin-top: 0;
+        padding-left: 26px;
+        font-size: 13px;
+
+        &.text-lg {
+          font-size: 15px !important;
+          margin-top: -6px;
+        }
+      }
+
+      &:before,
+      &:after {
+      }
+
+      &:before {
+        width: 20px;
+        height: 20px;
+      }
+
+      &:after {
+        width: 16px;
+        height: 16px;
+        top: 2px;
+        left: 2px;
+      }
+    }
+  }
+
+  &.checkbox-lg {
+    > span {
+      height: 23px;
+      margin-top: 0;
+      padding-left: 26px;
+      font-size: 13px;
+
+      &.text-lg {
+        font-size: 15px !important;
+        margin-top: -6px;
+      }
+    }
+
+    &:before,
+    &:after {
+    }
+
+    &:before {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:after {
+      width: 16px;
+      height: 16px;
+      top: 2px;
+      left: 2px;
+    }
+  }
+}
+

@@ -1,0 +1,23 @@
+.page-about {
+  .page-title {
+    margin-top: 0;
+  }
+  hr {
+    margin: 2rem 0;
+  }
+}
+.about-profile {
+  //border-radius: 1rem;
+  border-radius: 10%;
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -55px;
+  margin-bottom: 2rem;
+
+  @media (min-width: $screen-md-min) {
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+}

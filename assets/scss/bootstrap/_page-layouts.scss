@@ -1,0 +1,123 @@
+
+// 페이지 제목 헤더
+.page-title-wrapper {
+  .title {
+    margin: 0;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    font-weight: 600;
+
+    @media (min-width: $screen-sm) {
+      padding-top: 100px;
+    }
+  }
+}
+
+// 페이지 본문 레이아웃
+.page-body-wrapper {
+  position: relative;
+  min-height: 400px;
+  @media (min-width: $screen-sm-min) {
+    min-height: 700px;
+  }
+
+  .page-body-section  {
+
+    &:first-child {
+      padding-top: 30px;
+      @media (min-width: $screen-sm-min) {
+        padding-top: 35px;
+      }
+      @media (min-width: $screen-md-min) {
+        padding-top: 40px;
+      }
+    }
+    &:last-child {
+      padding-bottom: 40px;
+      @media (min-width: $screen-sm-min) {
+        padding-bottom: 50px;
+      }
+      @media (min-width: $screen-md-min) {
+        padding-bottom: 60px;
+      }
+    }
+
+  }
+
+  .subtitle {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+
+    small {
+      font-size: 80%;
+    }
+  }
+}
+
+.section-group {
+  padding: 20px 0;
+
+  &:nth-child(even) {
+    background-color: #fff;
+    @media (min-width: $screen-md-min) {
+      background-color: transparent;
+    }
+  }
+}
+
+.with-margin-bottom {
+  margin-bottom: 35px;
+}
+
+.with-margin-top {
+  margin-top: 35px;
+}
+
+.with-padding-top {
+  padding-top: 60px;
+  @media (min-width: $screen-md-min) {
+    padding-top: 70px;
+  }
+}
+
+.col-question {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+
+  max-width: 100%;
+  width: 100%;
+  @media (min-width: $screen-sm-min) {
+    width: 700px;
+  }
+  @media (min-width: $screen-md-min) {
+    width: 700px;
+    margin: 0;
+  }
+  @media (min-width: $screen-lg-min) {
+    margin: 0 auto;
+    width: 800px;
+  }
+
+  .section-title {
+    padding: 1rem;
+    margin: 0;
+
+    @media (min-width: $screen-sm-min) {
+      padding-left: 4px;
+    }
+  }
+
+  .card-profile-wrapper {
+    width: 177.5px;
+    position: absolute;
+    top: 0;
+    right: -190px;
+
+    .btn {
+      font-size: 14px;
+    }
+  }
+}

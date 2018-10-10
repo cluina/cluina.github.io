@@ -1,0 +1,414 @@
+//
+// Columns
+// --------------------------------------------------
+
+.column-container {
+  padding: 0;
+}
+
+.column-row {
+  width: 940px;
+  max-width: 100%;
+  margin: 0 auto;
+  //padding: 1rem;
+
+  //@media (min-width: $screen-xs-min) {
+  //  padding: 0;
+  //}
+}
+.column-padding-left {
+  padding-left: 1rem;
+
+  @media (min-width: $screen-sm-min) {
+    padding-left: 17px;
+  }
+  @media (min-width: $screen-md-min) {
+    padding-left: 120px;
+  }
+}
+.column-padding-right {
+  padding-right: 1rem;
+  @media (min-width: $screen-sm-min) {
+    padding-right: 17px;
+  }
+  @media (min-width: $screen-md-min) {
+    padding-right: 120px;
+  }
+}
+
+// ----------------------
+// Column Header
+// ----------------------
+.column-header {
+  //position: fixed;
+  position: relative;
+  //background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  z-index: 400;
+
+  height: 400px;
+  @media (min-width: $screen-sm-min) {
+    height: 500px;
+  }
+
+  .column-title-wrapper {
+    position: absolute;
+    left: 0;
+    padding: 1rem;
+
+    @media (min-width: $screen-md-min) {
+      left: 120px;
+      padding: 0;
+    }
+
+    &.column-title-middle {
+      top: 53%;
+      @include translate(0, -50%);
+      @media (min-width: $screen-md-min) {
+        top: 55%;
+      }
+    }
+
+    &.column-title-bottom {
+      bottom: 10%;
+      @media (min-width: $screen-md-min) {
+        bottom: 10%;
+      }
+    }
+
+
+    // 칼럼 헤더가 노말 이미지일 때,
+    // 타이틀 사이즈가 더 큼
+    // -------------------------------------------
+    .title {
+      word-break: keep-all;
+      margin-top: 2rem;
+      font-size: 1.75rem;
+      font-weight: 600;
+      @media (min-width: $screen-sm-min) {
+        font-size: 2rem;
+      }
+      @media (min-width: $screen-md-min) {
+        font-size: 40px;
+      }
+    }
+    .subtitle {
+      word-break: keep-all;
+      font-size: 1rem;
+      font-weight: 200;
+      margin-top: 1rem;
+      @media (min-width: $screen-sm-min) {
+        font-size: 1rem;
+        margin-top: 1.5rem;
+      }
+    }
+  }
+
+  .backdrop {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: .55;
+  }
+
+  .column-container,
+  .column-row {
+    position: relative;
+    height: 100%;
+  }
+
+  .card-mentor-profile-list {
+    width: auto;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+
+    @media (min-width: $screen-sm-min) {
+      bottom: 60px;
+    }
+    @media (min-width: $screen-md-min) {
+      bottom: 60px;
+    }
+
+    .card-label {
+      padding: 0;
+
+      img {
+        width: 60px;
+        @media (min-width: $screen-md-min) {
+          width: 80px;
+        }
+      }
+    }
+  }
+}
+
+// ----------------------
+// Column Header Full
+// ----------------------
+.column-header-full {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center !important;
+
+  .column-title-wrapper {
+
+    &.column-title-bottom {
+      bottom: 10% !important;
+    }
+
+    // 칼럼 헤더가 전체 이미지일 때,
+    // 모바일용 타이틀 사이즈가 더 큼
+    // -------------------------------------------
+    .title {
+      font-size: 30px;
+      @media (min-width: $screen-md-min) {
+        font-size: 40px;
+      }
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      font-weight: 200;
+
+      @media (min-width: $screen-md-min) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+
+.column-header-info {
+  position: absolute;
+  height: auto;
+  bottom: 20px;
+
+  .column-subtitle {
+    width: 250px;
+  }
+
+  // 예외적으로 아이폰5 등 소형 휴대폰을 위한 스타일
+  @media (max-width: 330px) {
+    .column-subtitle {
+      width: 205px;
+    }
+  }
+  @media (min-width: $screen-sm-min) {
+    bottom: 60px;
+
+    .column-subtitle {
+      width: 450px;
+    }
+  }
+  @media (min-width: $screen-md-min) {
+    bottom: 60px;
+  }
+
+  .btn {
+    margin-top: 1rem;
+    font-size: 16px;
+    font-weight: 500;
+    padding: .5rem 7rem;
+  }
+}
+.column-title,
+.column-subtitle {
+  word-break: keep-all;
+}
+.column-title {
+  font-size: 1.75rem;
+  @media (min-width: $screen-sm-min) {
+    font-size: 2rem;
+  }
+  @media (min-width: $screen-md-min) {
+    font-size: 40px;
+  }
+}
+.column-subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  @media (min-width: $screen-sm-min) {
+    font-size: 1rem;
+  }
+  @media (min-width: $screen-md-min) {
+    font-size: 16px;
+  }
+}
+
+
+// ----------------------
+// Column Header Mini
+// ----------------------
+.column-header-mini {
+  height: 300px;
+  @media (min-width: $screen-tablet) {
+    height: 360px;
+  }
+  @media (min-width: $screen-desktop) {
+    height: 500px;
+  }
+}
+
+
+// ----------------------
+// Column Navbar
+// ----------------------
+.navbar-triple-item {
+  li {
+    width: 33.33% !important;
+
+    a {
+      &:hover,
+      &:focus {
+        color: $brand-primary !important;
+      }
+    }
+
+    &.active {
+      background-color: $brand-primary !important;
+      a {
+        color: #fff !important;
+      }
+    }
+
+    @media (min-width: $screen-sm-min) {
+      width: auto !important;
+      &.active {
+        background-color: transparent !important;
+        a {
+          color: $brand-primary !important;
+        }
+      }
+    }
+  }
+}
+
+.column-container {
+
+  // ----------------------
+  // Column Threads
+  // ----------------------
+  .thread {
+    //margin-bottom: 1px;
+  }
+}
+
+// ----------------------
+// Column Thumbnail
+// ----------------------
+a:last-child {
+  .column-thumbnail {
+      border-bottom: 1px solid #eee;
+  }
+}
+
+.column-thumbnail {
+  position: relative;
+  float: none;
+  color: $gray-dark;
+
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-bottom: 0;
+  //border-top: 1px solid #ddd;
+  //border-bottom: 1px solid #ddd;
+
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .column-thumbnail-media,
+  .column-thumbnail-content {
+    float: left;
+  }
+
+  .column-thumbnail-media {
+    background-size: cover;
+    background-position: center;
+
+    width: 120px;
+    height: 120px;
+
+    @media (min-width: $screen-sm-min) {
+      width: 200px;
+      height: 150px;
+    }
+  }
+
+
+  .column-thumbnail-content {
+    width: calc(100% - 120px);
+    height: 120px;
+    text-overflow: ellipsis;
+    padding: .8rem;
+    position: relative;
+
+    @media (min-width: $screen-sm-min) {
+      width: calc(100% - 200px);
+      height: 150px;
+      padding: 1.5rem;
+    }
+
+    h1 {
+      margin: 0 0 .3rem;
+      padding: 0;
+      font-size: 1rem;
+      font-weight: 600;
+      // 말줄임표
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-wrap: normal;
+      width: 100%;
+      overflow: hidden;
+
+      @media (min-width: $screen-sm-min) {
+        margin: 0 0 1rem;
+        font-size: 1.1rem;
+      }
+    }
+
+    p {
+      font-size: .8rem;
+      margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      white-space: normal;
+      height: 2.4em;
+      line-height: 1.3;
+      text-align: left;
+      word-wrap: break-word;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+
+      @media (min-width: $screen-sm-min) {
+        font-size: .85rem;
+      }
+    }
+
+    small {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      font-size: .85rem;
+
+      color: #aaa;
+      font-weight: 200;
+
+      padding: .8rem;
+      @media (min-width: $screen-sm-min) {
+        padding: 1.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+//
+// Carousel Column
+// --------------------------------------------------
+
+.carousel-column {
+  max-width: 1300px;
+  margin: 0 auto;
+
+  .carousel-control {
+    width: 6%;
+    opacity: 1;
+
+    &:disabled {
+      opacity: .5;
+      cursor: not-allowed;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+//
+// Floating Action Button
+// -------------------------------------------------------------
+
+.btn-action {
+  position: fixed;
+  right: 0.65rem;
+  bottom: 0.65rem;
+
+  width: 70px;
+  height: 70px;
+  box-sizing: border-box;
+  padding: 0;
+  background-color: $brand-primary;
+  color: #fff;
+
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+
+  border: none;
+  border-radius: 50%;
+  fill: currentColor;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  overflow: hidden;
+
+  &.btn-action-question {
+    padding: 12px 0;
+    line-height: 1.3;
+  }
+}

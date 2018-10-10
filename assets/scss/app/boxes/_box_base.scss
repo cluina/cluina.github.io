@@ -1,0 +1,22 @@
+//
+// Base Box
+// -------------------------------------------------------------
+
+.box {
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem;
+
+  .title {
+    margin: 0.5rem 0 1rem;
+  }
+
+  hr {
+    margin: 1rem 0;
+  }
+}
+
+.box-relative {
+  display: block;
+  position: relative;
+}

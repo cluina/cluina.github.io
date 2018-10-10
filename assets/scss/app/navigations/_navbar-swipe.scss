@@ -1,0 +1,119 @@
+//
+// Navigation Bar - SWIPE
+// -------------------------------------------------------------
+
+.nav-swipe-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-right: 40px;
+
+  .nav-swipe-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #999;
+    background: none;
+    padding: 11px 16px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 2px;
+    z-index: 10;
+    width: 18px;
+    height: 46px;
+    background: -webkit-gradient(linear,right top,left top,from(rgba(255,255,255,0)),color-stop(83.34%,#fff));
+    background: -webkit-linear-gradient(right,rgba(255,255,255,0),#fff 83.34%);
+    background: linear-gradient(to left,rgba(255,255,255,0),#fff 83.34%)
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 30px;
+    bottom: 2px;
+    z-index: 10;
+    width: 42px;
+    height: 46px;
+    background: -webkit-gradient(linear,left top,right top,from(rgba(255,255,255,0)),color-stop(65%,#fff));
+    background: -webkit-linear-gradient(left,rgba(255,255,255,0),#fff 65%);
+    background: linear-gradient(to right,rgba(255,255,255,0),#fff 65%);
+  }
+}
+
+.nav-swipe {
+  background-color: #fff;
+  /*border-bottom: 1px solid #ddd;*/
+  font-weight: 600;
+
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  height: 100%;
+  font-size: 0;
+  /*line-height: 0;*/
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+
+  &.extended {
+    //background: yellow;
+
+    li {
+      width: 49%;
+      float: left;
+
+      &+li {
+        margin-left: 0;
+      }
+
+      a {
+        border: none !important;
+      }
+    }
+  }
+
+  li {
+    /*width: 28%;*/
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+    white-space: normal;
+    font-size: 18px;
+    float: none;
+    padding: 0 10px;
+    -webkit-transition: .3s cubic-bezier(.22,.61,.36,1);
+    transition: .3s cubic-bezier(.22,.61,.36,1);
+
+    &.active {
+      a {
+        color: $brand-primary !important;
+        color: #333 !important;
+        /*color: #333 !important;*/
+        border-bottom: 3px solid $brand-primary;
+        &:hover,
+        &:focus {
+          background: none;
+        }
+      }
+    }
+
+    a {
+      padding: 10px 8px 8px;
+      border-radius: 0;
+      color: #777 !important;
+      background: none !important;
+      &:hover,
+      &:focus {
+        color: #333 !important;
+      }
+
+
+    }
+  }
+}

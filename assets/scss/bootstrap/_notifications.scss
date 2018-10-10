@@ -1,0 +1,93 @@
+//
+// Notifications
+// --------------------------------------------------
+.notification {
+    display: block;
+    padding: 1rem;
+}
+
+.notification-finance-tech {
+    background-color: #f9f9f9;
+    font-size: 12px;
+    margin-top: 1rem;
+
+    ol, ul {
+        padding-left: 18px;
+    }
+}
+
+.notification-status {
+    position: relative;
+    border: 1px solid #eee;
+    //background-color: #f9f9f9;
+    background-color: #fff;
+    margin-bottom: 1rem;
+
+    min-height: 73px;
+    @media (min-width: $screen-sm-min) {
+        min-height: 66px;
+    }
+
+    h5 {
+        margin: 0;
+        padding: 0 40px 0 65px;
+        font-size: .85rem;
+        @media (min-width: $screen-sm-min) {
+            padding: 0 85px;
+            font-size: 1rem;
+        }
+    }
+
+    .label-danger + h5 {
+        padding-left: 45px;
+        @media (min-width: $screen-sm-min) {
+            padding-left: 55px;
+        }
+    }
+
+    .label {
+        left: 1rem;
+
+        font-size: 12px;
+        padding: .4rem .45rem;
+        @media (min-width: $screen-sm-min) {
+            font-size: 1.05rem;
+            padding: .5rem .6rem;
+        }
+    }
+
+    .btn-shortcut {
+        right: 0;
+        background-color: transparent;
+        border: 0;
+        font-size: 23px;
+        padding: 6px 1rem;
+
+        span {
+            display: none;
+        }
+
+        @media (min-width: $screen-sm-min) {
+            right: 1rem;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            padding: 6px 12px;
+
+            span {
+                display: inline;
+            }
+        }
+    }
+
+    // 수직 중간 정렬
+    h5,
+    .label,
+    .btn {
+        position: absolute;
+        top: 50%;
+        @include translate(0, -50%);
+    }
+
+
+}

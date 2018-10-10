@@ -1,21 +1,53 @@
 ---
 layout: default
 ---
+<div class="row">
+    <div class="col-md-2 hidden-xs hidden-sm">
+        {% include sidebar.html %}
+    </div>
+    <div class="col-md-8">
+        <div class="post">
+            <div class="post-header">
+                <a href="/categories/#{{ page.category }}">
+                    <span class="tag text-muted" style="color: #bbb;">{{ page.category }}</span>
+                </a>
+                <h1 class="post-title post-title-custom">{{ page.title }}</h1>
+                <br>
+                <time class="post-date post-date-custom">{{ page.date | date_to_string }}</time>
+                <br class="hidden-sm hidden-md hidden-lg">
+                <span class="post-date">
+                    {% for tag in page.tags %}
+                        <a href="/search/?tags={{ tag }}" class="tag">#{{ tag }}</a>
+                    {% endfor %}
+                </span>
+            </div>
+            {% if page.image %}
+                <br>
+                <img src="{{ page.image }}" alt="">
+            {% endif %}
+            <hr>
+            <div class="post-body">
+                {{ content }}
+            </div>
 
-<div class="post">
-    <h1 class="post-title post-title-custom">{{ page.title }}</h1>
-    <span class="post-date post-date-custom">{{ page.date | date_to_string }}</span>
-    <span class="post-date">
-        {% for tag in page.tags %}
-            <a href="/search/?tags={{ tag }}" class="tag">#{{ tag }}</a>
-        {% endfor %}
-    </span>
-  {{ content }}
+            {% include name-card.html %}
+            {% include related-posts.html %}
+
+            <br>
+            <div id="disqus_thread"></div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="post-toc hidden-xs hidden-sm">
+            <h5>CONTENTS</h5>
+            {% include toc.html html=content %}
+            <a href="#">top</a>
+        </div>
+    </div>
 </div>
 
-<div id="disqus_thread"></div>
-<script>
 
+<script>
   /**
    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */

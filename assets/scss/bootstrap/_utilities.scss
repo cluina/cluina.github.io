@@ -1,0 +1,133 @@
+//
+// Utility classes
+// --------------------------------------------------
+
+
+// Floats
+// -------------------------
+
+.clearfix {
+  @include clearfix;
+}
+.center-block {
+  @include center-block;
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+.no-margin {
+  margin: 0 !important;
+}
+.no-margin-xs {
+  @media (max-width: $screen-xs-max) {
+    margin: 0 !important;
+  }
+}
+.margin-bottom-default {
+  margin-bottom: 2rem !important;
+}
+.no-padding {
+  padding: 0 !important;
+}
+.no-padding-xs {
+  @media (max-width: $screen-xs-max) {
+    padding: 0 !important;
+  }
+}
+.no-padding-top-xs {
+  @media (max-width: $screen-xs-max) {
+    padding-top: 0 !important;
+  }
+}
+.no-list-style {
+  list-style: none;
+
+  &.list-no-padding {
+    padding-left: 0;
+  }
+}
+.list-no-padding {
+  padding-left: 19px;
+}
+.word-spacing {
+  padding: 0 .5rem;
+}
+.word-spacing-lg {
+  padding: 0 1rem;
+}
+.border-default {
+  border: 1px solid #eee;
+}
+.border-gray {
+  border: 1px solid #ddd;
+}
+.border-gray-bottom {
+  border-bottom: 1px solid #ddd;
+}
+.border-gray-top {
+  border-top: 1px solid #ddd;
+}
+.row-xs {
+  @media (max-width: $screen-xs-max) {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+}
+.btn-form-height {
+  height: 39px;
+}
+
+.yellow-bar {
+  margin-left: 0;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 30px;
+  height: 3px;
+  background-color: $brand-primary;
+}
+.border-bold {
+  border: 1px solid #ddd !important;
+}
+.border-horizontal-xs {
+  @media (max-width: $screen-xs-max) {
+    border-left: 0 !important;
+    border-right: 0 !important;
+  }
+}
+
+// Toggling content
+// -------------------------
+
+// Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  @include text-hide;
+}
+
+
+// Hide from screenreaders and browsers
+//
+// Credit: HTML5 Boilerplate
+
+.hidden {
+  display: none !important;
+}
+
+
+// For Affix plugin
+// -------------------------
+
+.affix {
+  position: fixed;
+}
