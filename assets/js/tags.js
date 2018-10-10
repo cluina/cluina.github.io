@@ -3,16 +3,15 @@ let initialData = {}
 const setTitle = hash => {
     const title = hash.toUpperCase()
     document.title = title
-    document.getElementById('category-title').innerText = title
+    document.getElementById('tag-title').innerText = title
 }
 
 const goHome = () => {
-    alert("카테고리를 찾을 수 없습니다.")
+    alert("태그를 찾을 수 없습니다.")
     location.href = '/'
 }
 
 const renderTags = (tags) => {
-    // console.log('renderTags()')
     return tags.reduce((html, tag) => {
         html += `<a href="/tags/#${tag}" class="tag">#${tag}</a>`
         return html
@@ -20,8 +19,8 @@ const renderTags = (tags) => {
 }
 
 const renderPost = (post) => {
-    // console.log('renderPost()')
-    // console.log(post)
+    console.log('renderPost()')
+    console.log(post)
     return `<div class="post">
         <div class="post-thumbnail pull-right" style="background-image: url('${post.image}')"></div>
         <a href="/categories/#${post.category.toLowerCase()}">
@@ -36,12 +35,11 @@ const renderPost = (post) => {
 }
 
 const renderPosts = (hash) => {
-    // console.log('renderPosts()')
-    let category = initialData.filter(item => {
-        if (item) return item.name === hash
+    console.log('renderPosts()')
+    let posts = initialData.filter(item => {
+        return item.tags.filter(n => n).indexOf(hash) !== -1
     })
-    if (!category[0]) goHome()
-    let posts = category[0].posts.filter(n => n)
+    if (!posts.length) goHome()
     let str = ''
     for (post of posts) {
         str += renderPost(post)
@@ -52,7 +50,7 @@ const renderPosts = (hash) => {
 if (window.location.hash) {
     const hash = window.location.hash.split('#')[1]
     setTitle(hash)
-    fetch("/categories.json", { headers: { "Content-Type": "application/json; charset=utf-8" }})
+    fetch("/search.json", { headers: { "Content-Type": "application/json; charset=utf-8" }})
         .then(res => res.json())
         .then(response => {
             initialData = response.filter(n => n);
