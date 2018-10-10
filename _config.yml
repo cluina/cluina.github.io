@@ -7,7 +7,7 @@ pygments:         true
 # Permalinks
 # permalink:        pretty
 # Produces a cleaner folder structure when using categories
-permalink: /:year/:month/:day/:title.html
+permalink: /:year/:month/:day/:title
 
 
 
