@@ -11,7 +11,9 @@ const toggleNav = () => {
     isExtended = !isExtended
 }
 for (item of document.getElementsByTagName('a')) {
-    item.addEventListener('click' , e => toggleNav())
+    item.addEventListener('click' , e => {
+        if (isExtended) toggleNav()
+    })
 }
 // document.body.addEventListener('click', (e) => {
 //     if (isExtended && !e.target.classList.contains('nav-swipe-wrapper')) {
