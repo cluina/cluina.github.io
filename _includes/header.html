@@ -1,8 +1,8 @@
 <header>
-    <nav class="navbar navbar-default navbar-fixed-top" :class="{'navbar-compact': isScrolled, 'navbar-hidden': isHidden}">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div id="nav-container" class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed">
+                <button type="button" class="navbar-toggle collapsed" onclick="toggleNav()">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar middle"></span>
@@ -28,25 +28,32 @@
             </div>
         </div><!-- /.container -->
 
-        <!--<div class="bg-white">-->
-            <!--<div class="container no-padding-xs">-->
-                <!--<div class="nav-swipe-wrapper">-->
-                    <!--<ul class="nav nav-pills nav-swipe" :class="{'extended' : isExtended}">-->
-                        <!--<li class="active"><a href="">홈</a></li>-->
-                        <!--<li class=""><a href="#">블록체인</a></li>-->
-                        <!--<li class=""><a href="#">Javascript</a></li>-->
-                        <!--<li class=""><a href="#">Vuejs</a></li>-->
-                        <!--<li class=""><a href="#">HTML</a></li>-->
-                        <!--<li class=""><a href="#">CSS</a></li>-->
-                        <!--<li class=""><a href="#">일상</a></li>-->
-                        <!--<li v-for="category in categories" :key="category.uuid"><a :href="category.path">{{ category.name }}</a></li>-->
-                    <!--</ul>-->
+        <div class="bg-white nav-wrapper">
+            <div class="container no-padding-xs">
+                <div class="nav-swipe-wrapper">
+                    <ul id="toggle-nav" class="nav nav-pills nav-swipe">
+                        <li class=""><a href="/">HOME</a></li>
+                        {% assign categories_list = site.categories %}
+                            {% if categories_list.first[0] == null %}
+                                {% for category in categories_list %}
+                                    <li><a href="/categories/#{{ category | downcase }}">{{ category | upcase }} ({{ site.tags[category].size }})</a></li>
+                                {% endfor %}
+                            {% else %}
+                                {% for category in categories_list %}
+                                    <li><a href="/categories/#{{ category[0] | downcase }}">{{ category[0] | upcase }} ({{ category[1].size }})</a></li>
+                                {% endfor %}
+                            {% endif %}
+                        {% assign categories_list = nil %}
+                        <li class="devider"></li>
+                        <li><a href="/about">about</a></li>
+                        <li><a href="/contact">contact</a></li>
+                    </ul>
                     <!--<button class="nav-swipe-btn btn-icon hidden-md hidden-lg" @click="isExtended = !isExtended">-->
                         <!--<i v-if="!isExtended" class="icon icon-angle-down text-bold"></i>-->
                         <!--<i v-else class="icon icon-cancel text-bold"></i>-->
                     <!--</button>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
+                </div>
+            </div>
+        </div>
     </nav>
 </header>
