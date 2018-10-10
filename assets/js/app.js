@@ -61,6 +61,7 @@ if (window.location.hash) {
 } else goHome()
 
 function HashHandler() {
+    setTitle()
     renderPosts(window.location.hash.split('#')[1])
 }
 
