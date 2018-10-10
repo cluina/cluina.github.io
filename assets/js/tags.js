@@ -13,14 +13,14 @@ const goHome = () => {
 
 const renderTags = (tags) => {
     return tags.reduce((html, tag) => {
-        html += `<a href="/tags/#${tag}" class="tag">#${tag}</a>`
+        if (tag) html += `<a href="/tags/#${tag}" class="tag">#${tag}</a>`
         return html
     }, '<span class="post-date">') + '</span>'
 }
 
 const renderPost = (post) => {
-    console.log('renderPost()')
-    console.log(post)
+    // console.log('renderPost()')
+    // console.log(post)
     return `<div class="post">
         <div class="post-thumbnail pull-right" style="background-image: url('${post.image}')"></div>
         <a href="/categories/#${post.category.toLowerCase()}">
@@ -35,7 +35,7 @@ const renderPost = (post) => {
 }
 
 const renderPosts = (hash) => {
-    console.log('renderPosts()')
+    // console.log('renderPosts()')
     let posts = initialData.filter(item => {
         return item.tags.filter(n => n).indexOf(hash) !== -1
     })
@@ -48,7 +48,7 @@ const renderPosts = (hash) => {
 }
 
 if (window.location.hash) {
-    const hash = window.location.hash.split('#')[1]
+    const hash = encodeURI(window.location.hash.split('#')[1]);
     setTitle()
     fetch("/search.json", { headers: { "Content-Type": "application/json; charset=utf-8" }})
         .then(res => res.json())
@@ -60,7 +60,7 @@ if (window.location.hash) {
 } else goHome()
 
 function HashHandler() {
-    renderPosts(window.location.hash.split('#')[1])
+    renderPosts(encodeURI(window.location.hash.split('#')[1]))
 }
 
 window.addEventListener("hashchange", HashHandler, false);

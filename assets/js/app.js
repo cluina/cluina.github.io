@@ -13,7 +13,7 @@ const goHome = () => {
 const renderTags = (tags) => {
     // console.log('renderTags()')
     return tags.reduce((html, tag) => {
-        html += `<a href="/tags/#${tag}" class="tag">#${tag}</a>`
+        if (tag) html += `<a href="/tags/#${tag}" class="tag">#${tag}</a>`
         return html
     }, '<span class="post-date">') + '</span>'
 }
