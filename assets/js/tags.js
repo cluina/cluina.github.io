@@ -1,7 +1,7 @@
 let initialData = {}
 
 const setTitle = () => {
-    const prefix = encodeURI(window.location.hash)
+    const prefix = decodeURIComponent(window.location.hash)
     document.title = prefix + ' | @Sangyoung.me'
     document.getElementById('tag-title').innerText = prefix
 }
@@ -48,7 +48,7 @@ const renderPosts = (hash) => {
 }
 
 if (window.location.hash) {
-    const hash = encodeURI(window.location.hash.split('#')[1]);
+    const hash = decodeURIComponent(window.location.hash.split('#')[1]);
     setTitle()
     fetch("/search.json", { headers: { "Content-Type": "application/json; charset=utf-8" }})
         .then(res => res.json())
@@ -60,7 +60,7 @@ if (window.location.hash) {
 } else goHome()
 
 function HashHandler() {
-    renderPosts(encodeURI(window.location.hash.split('#')[1]))
+    renderPosts(decodeURIComponent(window.location.hash.split('#')[1]))
 }
 
 window.addEventListener("hashchange", HashHandler, false);
