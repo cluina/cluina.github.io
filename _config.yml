@@ -44,16 +44,6 @@ email:                  lee@sangyoung.me
 
 
 # Setup
-
-
-
-
-
-
-
-
-
-
 sass:
   sass_dir:             assets/scss/
   style:                compressed
